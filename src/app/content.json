@@ -1,0 +1,205 @@
+{
+  "global": {
+    "nav": {
+      "home": { "ar": "الرئيسية", "en": "Home" },
+      "about": { "ar": "عني", "en": "About" },
+      "projects": { "ar": "مشاريعي", "en": "Projects" },
+      "skills": { "ar": "مهاراتي", "en": "Skills" },
+      "contact": { "ar": "تواصل", "en": "Contact" }
+    },
+    "footer": {
+      "copyright": {
+        "ar": "عبدالرحمن نشأت. كل الحقوق محفوظة.",
+        "en": "Abdulrahman Nashaat. All Rights Reserved."
+      },
+      "social_links": {
+        "github": "https://github.com/your-username",
+        "linkedin": "https://linkedin.com/in/your-username",
+        "facebook": "https://twitter.com/your-username",
+        "whatsapp": "https://twitter.com/your-username"
+      }
+    }
+  },
+  "home": {
+    "hero": {
+      "greeting": { "ar": "أهلاً بك، أنا", "en": "Hello, I am" },
+      "name": { "ar": "عبدالرحمن نشأت", "en": "Abdulrahman Nashaat" },
+      "tagline": {
+        "ar": [
+          "مطور واجهات أمامية.",
+          "متخصص في التقنيات الزراعية.",
+          "أبني حلولاً رقمية للزراعة."
+        ],
+        "en": [
+          "A Front-End Developer.",
+          "An AgriTech Specialist.",
+          "Building Digital Solutions for Agriculture."
+        ]
+      },
+      "cta_projects": { "ar": "شاهد أعمالي", "en": "View My Work" },
+      "cta_contact": { "ar": "تواصل معي", "en": "Get In Touch" }
+    },
+    "value_prop": {
+      "title": {
+        "ar": "كيف أضيف قيمة لمشروعك",
+        "en": "How I Add Value to Your Project"
+      },
+      "props": [
+        {
+          "title": {
+            "ar": "تطوير يركز على المستخدم",
+            "en": "User-Centric Development"
+          },
+          "desc": {
+            "ar": "أبني واجهات سهلة الاستخدام تحقق أهداف عملك وتلبي احتياجات المستخدمين.",
+            "en": "I build intuitive interfaces that meet business goals and user needs."
+          }
+        },
+        {
+          "title": { "ar": "أداء فائق وسريع", "en": "Performance-Driven Code" },
+          "desc": {
+            "ar": "أهتم بكتابة كود نظيف ومحسن لضمان أسرع أوقات تحميل وأفضل أداء ممكن.",
+            "en": "I focus on writing clean, optimized code for the fastest load times and best performance."
+          }
+        },
+        {
+          "title": {
+            "ar": "شغف بالتقنيات الزراعية",
+            "en": "Passion for AgriTech"
+          },
+          "desc": {
+            "ar": "أمتلك فهماً عميقاً للتحديات الزراعية، مما يمكنني من بناء حلول تقنية فعالة ومؤثرة.",
+            "en": "My deep understanding of agricultural challenges allows me to build effective and impactful tech solutions."
+          }
+        }
+      ]
+    },
+    "playground": {
+      "title": {
+        "ar": "مختبري: تجارب ومفاهيم حديثة",
+        "en": "My Playground: Experiments & Concepts"
+      }
+    },
+    "testimonials": {
+      "title": {
+        "ar": "ماذا يقول المتعاونون معي",
+        "en": "What My Collaborators Say"
+      }
+    },
+    "final_cta": {
+      "title": {
+        "ar": "هل أنت مستعد لبدء مشروعك القادم؟",
+        "en": "Ready to start your next project?"
+      },
+      "desc": {
+        "ar": "دعنا نتحدث عن كيف يمكننا تحويل فكرتك إلى واقع ملموس.",
+        "en": "Let's talk about how we can turn your idea into a tangible reality."
+      },
+      "button": { "ar": "ابدأ المحادثة", "en": "Start a Conversation" }
+    }
+  },
+  "about": {
+    "intro": {
+      "title": {
+        "ar": "من حقول المعرفة إلى حقول التعليمات البرمجية",
+        "en": "From Fields of Knowledge to Fields of Code"
+      }
+    },
+    "workflow": {
+      "title": { "ar": "منهجية عملي", "en": "My Workflow" }
+    },
+    "learning_journey": {
+      "title": {
+        "ar": "التطور المستمر: رحلتي التعليمية الحالية",
+        "en": "Constant Evolution: My Current Learning Journey"
+      },
+      "learning_now": { "ar": "أتعلم حاليًا", "en": "Currently Learning" },
+      "bookshelf": { "ar": "مكتبتي", "en": "My Bookshelf" }
+    },
+    "by_numbers": {
+      "experience": { "ar": "سنوات من الخبرة", "en": "Years of Experience" },
+      "agritech_projects": {
+        "ar": "مشروع AgriTech مكتمل",
+        "en": "AgriTech Projects Completed"
+      },
+      "react_projects": { "ar": "مشروع React", "en": "React Projects" }
+    }
+  },
+  "projects": {
+    "header": {
+      "title": { "ar": "دراسات الحالة", "en": "Case Studies" },
+      "desc": {
+        "ar": "أؤمن بأن كل مشروع هو قصة من التحديات، القرارات، والحلول. هنا، أشارككم تفاصيل بعض هذه القصص.",
+        "en": "I believe every project is a story of challenges, decisions, and solutions. Here, I share the details of some of those stories."
+      }
+    }
+  },
+  "project_detail": {
+    "overview": { "ar": "نظرة عامة", "en": "Overview" },
+    "role": { "ar": "دوري", "en": "My Role" },
+    "stack": { "ar": "التقنيات", "en": "Tech Stack" },
+    "timeline": { "ar": "المدة الزمنية", "en": "Timeline" },
+    "domain": { "ar": "المجال", "en": "Domain" },
+    "challenge": { "ar": "التحدي", "en": "The Challenge" },
+    "solution": { "ar": "الحل والمنهجية", "en": "The Solution & Approach" },
+    "achievements": {
+      "ar": "الإنجازات والمقاييس الرئيسية",
+      "en": "Key Achievements & Metrics"
+    },
+    "code_spotlight": {
+      "title": { "ar": "نظرة على الكود", "en": "Code Snippet Spotlight" }
+    },
+    "takeaways": {
+      "ar": "النتائج والدروس المستفادة",
+      "en": "Results & Takeaways"
+    },
+    "navigation": {
+      "prev": { "ar": "المشروع السابق", "en": "Previous Project" },
+      "next": { "ar": "المشروع التالي", "en": "Next Project" }
+    }
+  },
+  "skills": {
+    "header": {
+      "title": { "ar": "صندوق أدواتي", "en": "My Toolkit" },
+      "desc": {
+        "ar": "أؤمن باختيار الأداة المناسبة لكل مهمة. هذه هي التقنيات التي أستخدمها لبناء تجارب ويب حديثة وفعالة.",
+        "en": "I believe in choosing the right tool for the job. These are the technologies I use to build modern, effective web experiences."
+      }
+    },
+    "go_to_stack": {
+      "title": {
+        "ar": "مجموعة أدواتي المثالية للمشاريع الجديدة",
+        "en": "My Ideal Stack for New Projects"
+      },
+      "desc": {
+        "ar": "هذه المجموعة من التقنيات المتكاملة تمكنني من بناء تطبيقات قوية وقابلة للتطوير بسرعة وكفاءة عالية.",
+        "en": "This integrated stack enables me to build robust, scalable applications with high speed and efficiency."
+      }
+    }
+  },
+  "contact": {
+    "header": {
+      "title": { "ar": "لنبدأ حوارًا", "en": "Let's Start a Conversation" },
+      "desc": {
+        "ar": "سواء كان لديك سؤال، أو فكرة مشروع، أو ترغب فقط في التواصل، يسعدني أن أسمع منك.",
+        "en": "Whether you have a question, a project idea, or just want to connect, I'd be happy to hear from you."
+      },
+      "status": {
+        "ar": "متاح لمشاريع جديدة",
+        "en": "Available for new projects"
+      }
+    },
+    "form": {
+      "name": { "ar": "الاسم", "en": "Name" },
+      "email": { "ar": "البريد الإلكتروني", "en": "Email" },
+      "message": { "ar": "رسالتك", "en": "Your Message" },
+      "button": { "ar": "إرسال الرسالة", "en": "Send Message" }
+    },
+    "other_ways": {
+      "title": { "ar": "تفضل منصات أخرى؟", "en": "Prefer other platforms?" }
+    },
+    "booking": {
+      "title": { "ar": "احجز اجتماعًا مباشرًا", "en": "Book a Direct Meeting" }
+    }
+  }
+}
