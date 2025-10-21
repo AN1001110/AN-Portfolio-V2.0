@@ -13,7 +13,7 @@ export default function Spinner(): React.ReactNode {
       {/* Blurred Background */}
       <Box
         sx={{
-          backgroundColor: "rgb(44 62 80 / 0.5)",
+          backgroundColor: "rgb(44 62 80 / 0.8)",
           position: "absolute",
           inset: 0,
           backdropFilter: "blur(4px)",

@@ -56,7 +56,7 @@ const navVariants: Variants = {
 export default function NavBar() {
   const { width } = useScreenDimensions();
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const [isPending, startTransition] = useTransition();
 
@@ -68,12 +68,7 @@ export default function NavBar() {
 
   const param = usePathname();
 
-  const isDark = theme === "dark";
-
-  useEffect(() => {
-    if (isDark) document.documentElement.classList.add();
-    else document.documentElement.classList.remove("dark");
-  }, [isDark]);
+  const isDark: boolean = theme === "dark";
 
   useEffect(() => {
     setMounted(true);
@@ -87,6 +82,8 @@ export default function NavBar() {
         await toggleLanguageInServer(newLang);
       } catch (error) {
         console.error("Failed to change language:", error);
+      } finally {
+        if (isOpen) setIsOpen(false);
       }
     });
   }
@@ -99,6 +96,8 @@ export default function NavBar() {
         setTheme(newTheme);
       } catch (error) {
         console.error("Failed to change theme:", error);
+      } finally {
+        if (isOpen) setIsOpen(false);
       }
     });
   }
@@ -106,51 +105,50 @@ export default function NavBar() {
   if (isPending || !mounted) return <Spinner />;
   return (
     <AppBar
-      className="bg-background dark:bg-background-dark relative z-[49] border-b-2 border-b-primary/20 dark:border-b-primary-dark/20"
+      className="bg-background dark:bg-background-dark border-b-primary/20 dark:border-b-primary-dark/20 relative z-[49] border-b-2"
       position="fixed"
       variant="outlined"
     >
-      <Toolbar component={"nav"} variant="regular">
+      <Toolbar component={"nav"} variant="dense">
         <Stack
           direction={"row"}
-          className="flex-1 flex justify-between items-center"
+          className="flex flex-1 items-center justify-between"
         >
           <Logo
             src={theme === "dark" ? "/Logo-Dark.png" : "/Logo-Light.png"}
-            className="block bg-transparent  w-12 h-12 md:w-15 md:h-15  aspect-square "
+            className="block aspect-square h-12 w-12 bg-transparent md:h-15 md:w-15"
           />
           <IconButton
             className="block md:hidden"
             onClick={() => setIsOpen((isOpen) => !isOpen)}
           >
             <Bars3Icon
-              className={` w-8 h-8 text-muted-foreground dark:text-muted-foreground-dark font-[600] hover:text-primary dark:hover:text-primary-dark `}
+              className={`text-muted-foreground dark:text-muted-foreground-dark hover:text-primary dark:hover:text-primary-dark h-8 w-8 font-bold`}
             />
           </IconButton>
 
           <motion.div
             initial={false}
-            animate={isOpen || width >= 900 ? "open" : "close"}
+            animate={isOpen || width >= 768 ? "open" : "close"}
             variants={navVariants}
-            className={`absolute md:relative left-0 top-[104%] bg-background /70 dark:bg-background-dark/70 md:left-auto md:top-auto md:flex flex-col md:flex-row items-center justify-between w-full md:w-3/4   `}
+            className={`bg-background/95 dark:bg-background-dark/95 absolute top-[104%] left-0 w-full flex-col items-center justify-between md:relative md:top-auto md:left-auto md:flex md:w-7/10 md:flex-row`}
           >
-            <Stack
-              className="flex flex-col md:flex-row  items-center 
-            justify-between  w-full "
-            >
+            <Stack className="flex w-full flex-2 flex-col items-center justify-between md:flex-row">
               {pages.map((page) => (
                 <MuiLink
                   underline="none"
                   component={Link}
                   href={page.route}
                   key={page.name}
-                  className="flex font-[ inherit] w-full justify-center items-center border-b-2 md:border-b-0 p-4 border-b-primary/20 dark:border-b-primary-dark/20   "
+                  onClick={() => {
+                    if (isOpen) setIsOpen(false);
+                  }}
+                  className="border-b-primary/20 dark:border-b-primary-dark/20 flex w-full items-center justify-center border-b-2 p-4 md:block md:w-auto md:border-b-0 md:p-0"
                 >
                   <Typography
-                    fontFamily={"inherit"}
-                    className={` text-muted-foreground dark:text-muted-foreground-dark font-[600] hover:text-primary dark:hover:text-primary-dark text-sm  ${
+                    className={`text-muted-foreground dark:text-muted-foreground-dark hover:text-primary dark:hover:text-primary-dark after:bg-primary/90 dark:after:bg-primary-dark/90 relative font-[_inherit] after:absolute after:bottom-[-4px] after:left-1/2 after:h-[2px] after:w-0 after:translate-x-[-50%] after:transition-[width] after:duration-300 after:ease-in-out after:content-[''] hover:after:w-full ${
                       param === page.route &&
-                      "text-primary dark:text-primary-dark"
+                      "text-primary dark:text-primary-dark after:w-full"
                     }`}
                   >
                     {t(page.name)}
@@ -158,35 +156,30 @@ export default function NavBar() {
                 </MuiLink>
               ))}
             </Stack>
-            <Stack className="flex flex-row flex-1  justify-center md:justify-end items-center p-4 w-full">
+            <Stack className="flex w-full flex-1 flex-row items-center justify-center p-4 md:justify-end">
               <IconButton
-                className="text-muted-foreground dark:text-muted-foreground-dark  flex justify-center items-center  "
+                className="text-muted-foreground dark:text-muted-foreground-dark flex items-center justify-center"
                 disabled={isPending}
                 onClick={toggleTheme}
               >
                 {theme === "light" && mounted ? (
-                  <MoonIcon className="w-6 h-6 aspect-square text-muted-foreground dark:text-muted-foreground-dark font-[600] hover:text-primary dark:hover:text-primary-dark " />
+                  <MoonIcon className="text-muted-foreground dark:text-muted-foreground-dark hover:text-primary dark:hover:text-primary-dark aspect-square h-6 w-6 font-bold" />
                 ) : (
-                  <SunIcon className=" w-7 h-7  text-muted-foreground dark:text-muted-foreground-dark font-[600] hover:text-primary dark:hover:text-primary-dark" />
+                  <SunIcon className="text-muted-foreground dark:text-muted-foreground-dark hover:text-primary dark:hover:text-primary-dark h-7 w-7 font-bold" />
                 )}
               </IconButton>
 
               <Button
-                className=" text-muted-foreground dark:text-muted-foreground-dark font-[600] hover:text-primary  dark:hover:text-primary-dark
-                  hover:bg-transparent  ml-[-1rem] "
+                className="text-muted-foreground dark:text-muted-foreground-dark hover:text-primary dark:hover:text-primary-dark ml-[-1rem] font-bold hover:bg-transparent"
                 disabled={isPending}
                 onClick={toggleLang}
               >
-                <GlobeAltIcon className="h-6 w-6 " />
-                <Typography
-                  className="
-                 "
-                  variant="body2"
-                >
+                <GlobeAltIcon className="h-6 w-6" />
+                <Typography variant="body1">
                   {mounted && lang === "ar" ? (
                     <span className="font-inter leading-[1.6]">En</span>
                   ) : (
-                    <span className="font-cairo leading-[1.8] ">ع</span>
+                    <span className="font-cairo leading-[1.8]">ع</span>
                   )}
                 </Typography>
               </Button>

@@ -4,5 +4,30 @@
     "about": "About",
     "contact": "Contact",
     "portfolio": "Portfolio"
+  },
+  "heroSection": {
+    "title": "Hello, I'm Abdulrahman Nashaat 👋",
+    "description": "A Front-end Developer specializing in React and Next.js. Blending modern technology with sustainable agriculture 🌱.",
+    "cta": {
+      "portfolio": "Explore Projects",
+      "contact": "Initiate Contact"
+    }
+  },
+  "homeServices": {
+    "title": "what i offer",
+    "services": {
+      "service1": {
+        "title": "Code That Yields Solutions",
+        "description": "Developing interactive and reliable web applications using React and Next.js, with a focus on modern, user-centric design."
+      },
+      "service2": {
+        "title": "A Digital Harvest for Sustainable Agriculture",
+        "description": "Leveraging plant protection expertise to create user-friendly interfaces and intelligent digital tools that enhance farm productivity for a sustainable future."
+      },
+      "service3": {
+        "title": "Technology for Earth's Stewardship",
+        "description": "Applying code to purposeful projects with a commitment to righteous solutions, partnering to contribute to a better and more prosperous future."
+      }
+    }
   }
 }

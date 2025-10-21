@@ -1,0 +1,738 @@
+<!doctype html>
+<html class="dark" dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Abdulrahman Nashaat - Portfolio</title>
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Cairo:wght@400;700&amp;family=Inter:wght@400;700;900"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#68D391",
+              "background-light": "#F7FAFC",
+              "background-dark": "#0F1419",
+              "secondary-dark": "#1A202C",
+              "text-primary-light": "#F7FAFC",
+              "text-secondary-light": "#A0AEC0",
+              "highlight-gold": "#F4A460",
+            },
+            fontFamily: {
+              display: ["Cairo"],
+              body: ["Inter"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "0.75rem",
+              xl: "1rem",
+              full: "9999px",
+            },
+            boxShadow: {
+              "glow-green": "0 0 15px 5px rgba(104, 211, 145, 0.3)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Cairo", sans-serif;
+      }
+      .font-english {
+        font-family: "Inter", sans-serif;
+      }
+      .progress-bar {
+        animation: progress-animation 2s ease-out forwards;
+      }
+      @keyframes progress-animation {
+        from {
+          width: 0%;
+        }
+      }
+      .footer-bg {
+        background-image:
+          radial-gradient(
+            circle at 1px 1px,
+            rgba(104, 211, 145, 0.1) 1px,
+            transparent 0
+          ),
+          radial-gradient(
+            circle at 10px 10px,
+            rgba(104, 211, 145, 0.05) 1px,
+            transparent 0
+          );
+        background-size: 20px 20px;
+        animation: move-pattern 20s linear infinite;
+      }
+      @keyframes move-pattern {
+        from {
+          background-position: 0 0;
+        }
+        to {
+          background-position: 200px 200px;
+        }
+      }
+      #loading-spinner {
+        display: flex;
+        animation: fadeOut 0.5s forwards;
+        animation-delay: 1s;
+      }
+      .spinner {
+        width: 56px;
+        height: 56px;
+        border: 5px solid;
+        border-color: #68d391 transparent;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+      }
+      @keyframes rotation {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes fadeOut {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+      .nav-link {
+        position: relative;
+        transition: color 0.3s;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #68d391;
+        transition: width 0.3s ease-in-out;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+      #mobile-menu {
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+      }
+      #mobile-menu.open {
+        transform: translateX(0);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-text-primary-light font-display"
+  >
+    <div
+      class="fixed inset-0 z-[100] flex items-center justify-center bg-[#0F1419]/90 backdrop-blur-sm"
+      id="loading-spinner"
+    >
+      <div class="spinner"></div>
+    </div>
+    <div class="flex min-h-screen flex-col">
+      <header
+        class="bg-background-dark/90 sticky top-0 z-50 shadow-md backdrop-blur-sm"
+      >
+        <nav
+          class="container mx-auto flex items-center justify-between px-6 py-4"
+        >
+          <div class="flex items-center gap-6">
+            <div class="hidden items-center gap-8 md:flex">
+              <a
+                class="text-text-secondary-light hover:text-primary nav-link"
+                href="#hero"
+                >الرئيسية</a
+              >
+              <a
+                class="text-text-secondary-light hover:text-primary nav-link"
+                href="#services"
+                >الخدمات</a
+              >
+              <a
+                class="text-text-secondary-light hover:text-primary nav-link"
+                href="#projects"
+                >المشاريع</a
+              >
+              <a
+                class="text-text-secondary-light hover:text-primary nav-link"
+                href="#skills"
+                >المهارات</a
+              >
+              <a
+                class="text-text-secondary-light hover:text-primary nav-link"
+                href="#contact"
+                >تواصل معي</a
+              >
+            </div>
+            <div class="hidden items-center gap-4 md:flex">
+              <button
+                class="text-text-secondary-light hover:text-primary transition-colors"
+              >
+                <span class="material-symbols-outlined"> dark_mode </span>
+              </button>
+              <button
+                class="text-text-secondary-light hover:text-primary flex items-center transition-colors"
+              >
+                <span class="material-symbols-outlined text-xl">
+                  language
+                </span>
+              </button>
+            </div>
+            <div class="flex items-center md:hidden">
+              <button
+                class="text-text-secondary-light hover:text-primary"
+                id="menu-button"
+              >
+                <span class="material-symbols-outlined text-3xl"> menu </span>
+              </button>
+            </div>
+          </div>
+          <a class="flex items-center gap-2" href="/">
+            <div
+              class="bg-primary flex h-8 w-8 items-center justify-center rounded-full"
+            >
+              <span class="text-background-dark font-english text-lg font-bold"
+                >AN</span
+              >
+            </div>
+          </a>
+        </nav>
+        <div
+          class="bg-background-dark fixed top-0 right-0 z-50 flex h-full w-full flex-col p-6"
+          id="mobile-menu"
+        >
+          <div class="mb-16 flex items-center justify-between">
+            <button
+              class="text-text-primary-light hover:text-primary"
+              id="close-menu-button"
+            >
+              <span class="material-symbols-outlined text-4xl"> close </span>
+            </button>
+          </div>
+          <div
+            class="flex flex-grow flex-col items-center justify-center space-y-8 text-center"
+          >
+            <a
+              class="text-text-primary-light hover:text-primary text-2xl transition-colors"
+              href="#hero"
+              >الرئيسية</a
+            >
+            <a
+              class="text-text-primary-light hover:text-primary text-2xl transition-colors"
+              href="#services"
+              >الخدمات</a
+            >
+            <a
+              class="text-text-primary-light hover:text-primary text-2xl transition-colors"
+              href="#projects"
+              >المشاريع</a
+            >
+            <a
+              class="text-text-primary-light hover:text-primary text-2xl transition-colors"
+              href="#skills"
+              >المهارات</a
+            >
+            <a
+              class="text-text-primary-light hover:text-primary text-2xl transition-colors"
+              href="#contact"
+              >تواصل معي</a
+            >
+          </div>
+          <div class="flex items-center justify-center gap-6 pb-8">
+            <button
+              class="text-text-secondary-light hover:text-primary transition-colors"
+            >
+              <span class="material-symbols-outlined text-3xl">
+                dark_mode
+              </span>
+            </button>
+            <button
+              class="text-text-secondary-light hover:text-primary flex items-center transition-colors"
+            >
+              <span class="material-symbols-outlined text-3xl"> language </span>
+            </button>
+          </div>
+        </div>
+      </header>
+      <main class="flex-grow">
+        <section
+          class="container mx-auto flex flex-col items-center px-6 py-20 text-center lg:flex-row lg:py-32 lg:text-right"
+          id="hero"
+        >
+          <div class="order-2 lg:order-1 lg:w-1/2 lg:pl-16">
+            <h2
+              class="text-text-primary-light text-4xl leading-tight font-bold md:text-5xl lg:text-6xl"
+            >
+              مرحباً، أنا عبدالرحمن نشأت 👋
+            </h2>
+            <p
+              class="text-text-secondary-light mx-auto mt-6 max-w-2xl text-lg md:text-xl lg:mx-0"
+            >
+              مطور واجهات أمامية متخصص في React و Next.js. أمزج بين التقنية
+              الحديثة والزراعة المستدامة 🌱
+            </p>
+            <div
+              class="mt-10 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start"
+            >
+              <a
+                class="bg-primary text-background-dark shadow-primary/20 hover:bg-opacity-90 font-english transform rounded-full px-8 py-3 font-bold shadow-lg transition-all hover:scale-105"
+                href="#projects"
+              >
+                Explore My Work
+              </a>
+              <a
+                class="border-primary text-primary hover:bg-primary/10 font-english transform rounded-full border-2 bg-transparent px-8 py-3 font-bold transition-colors hover:scale-105"
+                href="#contact"
+              >
+                Contact Me
+              </a>
+            </div>
+          </div>
+          <div
+            class="order-1 mb-12 flex justify-center lg:order-2 lg:mb-0 lg:w-1/2 lg:justify-end"
+          >
+            <div class="relative">
+              <div
+                class="bg-secondary-dark h-64 w-64 rounded-full bg-cover bg-center md:h-80 md:w-80"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDg_DHTXYoEhNtjsEsEnR0rIPg6pp_xg9uDpVc1nwj_PZ0AAcDxw8J6P-VKLc4MLFCtMjzN61uVks3HeWy-6XgesiR7LN4R2EU3YoQW2isS6is5LNUYZ1jVPNdX-7YJK7Jny-UodxOReAXm00h9yU6y-XxWLGGZRyEwufuQkdkPGJOlktAdkvtVApW4GNSzicCv2CH739jaHRBlVu4ShCyfy0pUvm96Qy71Ze4V_fKhuwxIeG31a-f5GOMkrRIc0NxHsjLlAeJo5zJj&quot;);
+                "
+              ></div>
+              <div
+                class="border-primary absolute inset-0 animate-pulse rounded-full border-4"
+              ></div>
+            </div>
+          </div>
+        </section>
+        <section
+          class="bg-background-light dark:bg-secondary-dark py-20"
+          id="services"
+        >
+          <div class="container mx-auto px-6">
+            <h3
+              class="text-text-primary-light mb-12 text-center text-3xl font-bold"
+            >
+              الخدمات التي أقدمها
+            </h3>
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+              <div
+                class="bg-secondary-dark dark:bg-secondary-dark hover:border-primary group hover:shadow-glow-green transform rounded-lg border border-transparent p-8 shadow-lg transition-all duration-300 hover:-translate-y-2"
+              >
+                <h4 class="text-text-primary-light mb-4 text-xl font-bold">
+                  تطوير واجهات المستخدم
+                </h4>
+                <p class="text-text-secondary-light">
+                  بناء واجهات مستخدم تفاعلية وجذابة باستخدام أحدث تقنيات React و
+                  Next.js.
+                </p>
+              </div>
+              <div
+                class="bg-secondary-dark dark:bg-secondary-dark hover:border-primary group hover:shadow-glow-green transform rounded-lg border border-transparent p-8 shadow-lg transition-all duration-300 hover:-translate-y-2"
+              >
+                <h4 class="text-text-primary-light mb-4 text-xl font-bold">
+                  حلول AgriTech
+                </h4>
+                <p class="text-text-secondary-light">
+                  تطوير تطبيقات مبتكرة لقطاع الزراعة تهدف إلى زيادة الكفاءة
+                  والاستدامة.
+                </p>
+              </div>
+              <div
+                class="bg-secondary-dark dark:bg-secondary-dark hover:border-primary group hover:shadow-glow-green transform rounded-lg border border-transparent p-8 shadow-lg transition-all duration-300 hover:-translate-y-2"
+              >
+                <h4 class="text-text-primary-light mb-4 text-xl font-bold">
+                  تحسين الأداء
+                </h4>
+                <p class="text-text-secondary-light">
+                  تحسين سرعة وأداء تطبيقات الويب لضمان أفضل تجربة مستخدم ممكنة.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="py-20" id="projects">
+          <div class="container mx-auto px-6">
+            <h3
+              class="text-text-primary-light mb-12 text-center text-3xl font-bold"
+            >
+              المشاريع المميزة
+            </h3>
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div
+                class="bg-background-light dark:bg-secondary-dark group overflow-hidden rounded-lg"
+              >
+                <div
+                  class="h-64 w-full bg-cover bg-center"
+                  style="
+                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAXdSjWB90Ambs-dCe-QrnaFNbAb7m8R1FXxtxVHM-LvXKDzfTszw7ldf24NDkaLK4PA5vgCaHFer1rT7I2ZTiHgDOzsnvyMy5NA_DRVrIl6y2Q3-dkhE2rvr5IsyPryFzVuNvEIw16BSrt1jyGZ0AGeeMk7UGQOl8ssmKlc4uqOGgX8IZEbR8LK1ZCATNODOvseTaNHa07NSG3-QYPdTMvry9ATVGwhEgAh4pKUzbRbSOwNYZJnuSHW1-ZzgIlF1SxrOWdj1t2UlbN&quot;);
+                  "
+                ></div>
+                <div class="p-6">
+                  <h4
+                    class="text-text-primary-light font-english text-xl font-bold"
+                  >
+                    Project Alpha
+                  </h4>
+                  <p class="text-text-secondary-light mt-2">
+                    منصة لإدارة المزارع الذكية.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-background-light dark:bg-secondary-dark group overflow-hidden rounded-lg"
+              >
+                <div
+                  class="h-64 w-full bg-cover bg-center"
+                  style="
+                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCMGFewtJchmBPYFC_LR3ZsdDWNev4qmBaFlr5LDiwPTu0NCIKIG9ju2MVJXwghLGOt-witcMgvQoBhaHAOWG22oVug3zO66gkEwEKK0JNuGraSeRYmoBG_iogkOyzKwodjw0GfTjLV6wx2aUYa3Qzh0kNgW4SzDGGXLs-uVGxUL71TFf6l8Pn6IwpVepkMsAnU92q9J75GUlmEBIS5EEoqV_Iug08lFEZ9iVV4jE5Lm3VKspTxbANjJtevyqKxsZcTeL-7kZVRCBqn&quot;);
+                  "
+                ></div>
+                <div class="p-6">
+                  <h4
+                    class="text-text-primary-light font-english text-xl font-bold"
+                  >
+                    Project Beta
+                  </h4>
+                  <p class="text-text-secondary-light mt-2">
+                    لوحة تحكم لتحليل بيانات المحاصيل.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-background-light dark:bg-secondary-dark group overflow-hidden rounded-lg"
+              >
+                <div
+                  class="h-64 w-full bg-cover bg-center"
+                  style="
+                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBSKBfavLY0w4s2TgZtykEYWuxjkC8hDA4MXC-V7ciZXfM8uVmKjGf5v-pOY9Qx1qIMGTrQSswHJouf-ubOqNsLVj9GD_LIid3NM5mHlj_SLvkmqJrnFYU92_DiCjBRenVnss1acigh2ljjm5RDOQuS_JAqcflLVWcqtBk--ZEMRnRRzf2xSCbZSw6GBLDqOOv-YTFZQgNjkeXX-UvFflNh1tVUK0Ri3sWQ6tXCb4yavZRWzpIYmLr7yPh4kyfhxo4KM4KuS9cdxkQ6&quot;);
+                  "
+                ></div>
+                <div class="p-6">
+                  <h4
+                    class="text-text-primary-light font-english text-xl font-bold"
+                  >
+                    Project Gamma
+                  </h4>
+                  <p class="text-text-secondary-light mt-2">
+                    تطبيق للتنبؤ بالطقس للمزارعين.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-background-light dark:bg-secondary-dark group overflow-hidden rounded-lg"
+              >
+                <div
+                  class="h-64 w-full bg-cover bg-center"
+                  style="
+                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCag2wEnIK15LXCk0aDaUbc8lFNqoKegBVe77-sBn8lEnN3-kKwdDMehal-JEKE9kZb5YJXLlrjqLcKLyIgNLQQwBz3igaTyHJ_VDxyf0ViGJv4GoeJUYImHE2w0KKsILlAwmJufa-30WTNv7qq60YkI-VUFbzgvVjnona4ajka6tc2e5veamqRIFz2UFfm79ERZiokjvCICDZREJOV4Uv_R0ya8gBwCPqkgkaVdlgPlH2Zev8XcrbOQ4VBEmbZfOov6NKfRH1VliAi&quot;);
+                  "
+                ></div>
+                <div class="p-6">
+                  <h4
+                    class="text-text-primary-light font-english text-xl font-bold"
+                  >
+                    Project Delta
+                  </h4>
+                  <p class="text-text-secondary-light mt-2">
+                    سوق إلكتروني للمنتجات الزراعية.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          class="bg-background-light dark:bg-secondary-dark py-20"
+          id="skills"
+        >
+          <div class="container mx-auto px-6">
+            <h3
+              class="text-text-primary-light mb-12 text-center text-3xl font-bold"
+            >
+              نبذة عن المهارات
+            </h3>
+            <div class="mx-auto max-w-4xl space-y-8">
+              <div class="font-english">
+                <div class="mb-1 flex justify-between">
+                  <span class="text-text-primary-light text-base font-medium"
+                    >React</span
+                  >
+                  <span class="text-primary text-sm font-medium">95%</span>
+                </div>
+                <div
+                  class="bg-background-dark dark:bg-background-light/10 h-2.5 w-full rounded-full"
+                >
+                  <div
+                    class="from-primary/70 to-primary progress-bar h-2.5 rounded-full bg-gradient-to-r"
+                    style="width: 95%"
+                  ></div>
+                </div>
+              </div>
+              <div class="font-english">
+                <div class="mb-1 flex justify-between">
+                  <span class="text-text-primary-light text-base font-medium"
+                    >Next.js</span
+                  >
+                  <span class="text-primary text-sm font-medium">90%</span>
+                </div>
+                <div
+                  class="bg-background-dark dark:bg-background-light/10 h-2.5 w-full rounded-full"
+                >
+                  <div
+                    class="from-primary/70 to-primary progress-bar h-2.5 rounded-full bg-gradient-to-r"
+                    style="width: 90%"
+                  ></div>
+                </div>
+              </div>
+              <div class="font-english">
+                <div class="mb-1 flex justify-between">
+                  <span class="text-text-primary-light text-base font-medium"
+                    >AgriTech</span
+                  >
+                  <span class="text-primary text-sm font-medium">85%</span>
+                </div>
+                <div
+                  class="bg-background-dark dark:bg-background-light/10 h-2.5 w-full rounded-full"
+                >
+                  <div
+                    class="from-primary/70 to-primary progress-bar h-2.5 rounded-full bg-gradient-to-r"
+                    style="width: 85%"
+                  ></div>
+                </div>
+              </div>
+              <div class="font-english">
+                <div class="mb-1 flex justify-between">
+                  <span class="text-text-primary-light text-base font-medium"
+                    >Tailwind CSS</span
+                  >
+                  <span class="text-primary text-sm font-medium">98%</span>
+                </div>
+                <div
+                  class="bg-background-dark dark:bg-background-light/10 h-2.5 w-full rounded-full"
+                >
+                  <div
+                    class="from-primary/70 to-primary progress-bar h-2.5 rounded-full bg-gradient-to-r"
+                    style="width: 98%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="py-20" id="contact">
+          <div class="container mx-auto px-6 text-center">
+            <h2
+              class="text-text-primary-light mx-auto max-w-3xl text-3xl font-bold md:text-4xl"
+            >
+              هل أنت مستعد لبدء مشروعك القادم معي؟
+            </h2>
+            <p class="text-text-secondary-light mx-auto mt-4 max-w-xl">
+              لنتعاون معاً لتحويل فكرتك إلى حقيقة ملموسة. تواصل معي الآن للبدء.
+            </p>
+            <a
+              class="bg-primary text-background-dark shadow-primary/20 hover:bg-opacity-90 mt-8 inline-block transform rounded-full px-10 py-4 font-bold shadow-lg transition-all hover:scale-105"
+              href="mailto:contact@abdulrahman.dev"
+            >
+              تواصل معي
+            </a>
+          </div>
+        </section>
+      </main>
+      <footer
+        class="bg-background-dark footer-bg border-primary/20 relative overflow-hidden border-t pt-16 pb-8"
+      >
+        <div class="container mx-auto px-6">
+          <div
+            class="grid grid-cols-1 gap-8 text-center md:grid-cols-2 md:text-right lg:grid-cols-4"
+          >
+            <div class="lg:col-span-1">
+              <h5 class="text-highlight-gold mb-4 text-lg font-bold">عني</h5>
+              <p class="text-text-secondary-light text-sm">
+                مطور React متخصص في AgriTech، أهدف لدمج التكنولوجيا بالزراعة
+                لخلق حلول مستدامة ومبتكرة.
+              </p>
+            </div>
+            <div>
+              <h5 class="text-primary mb-4 text-lg font-bold">روابط سريعة</h5>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    class="text-text-secondary-light hover:text-primary transition-colors"
+                    href="#hero"
+                    >الرئيسية</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-text-secondary-light hover:text-primary transition-colors"
+                    href="#services"
+                    >الخدمات</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-text-secondary-light hover:text-primary transition-colors"
+                    href="#projects"
+                    >المشاريع</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-text-secondary-light hover:text-primary transition-colors"
+                    href="#skills"
+                    >المهارات</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h5 class="text-primary mb-4 text-lg font-bold">تواصل</h5>
+              <ul class="text-text-secondary-light font-english space-y-2">
+                <li>
+                  <a
+                    class="hover:text-primary transition-colors"
+                    href="mailto:email@example.com"
+                    >email@example.com</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-primary transition-colors"
+                    href="tel:+1234567890"
+                    >+1 (234) 567-890</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="flex flex-col items-center md:items-end lg:col-start-4">
+              <h5 class="text-primary mb-4 text-lg font-bold">تابعني</h5>
+              <div class="flex space-x-4 space-x-reverse">
+                <a
+                  class="text-primary hover:text-highlight-gold transform transition-all duration-300 hover:scale-125"
+                  href="#"
+                >
+                  <svg
+                    class="h-8 w-8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  class="text-primary hover:text-highlight-gold transform transition-all duration-300 hover:scale-125"
+                  href="#"
+                >
+                  <svg
+                    class="h-8 w-8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <rect
+                      height="18"
+                      rx="5"
+                      ry="5"
+                      width="18"
+                      x="3"
+                      y="3"
+                    ></rect>
+                    <path
+                      d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                    ></path>
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                  </svg>
+                </a>
+                <a
+                  class="text-primary hover:text-highlight-gold transform transition-all duration-300 hover:scale-125"
+                  href="#"
+                >
+                  <svg
+                    class="h-8 w-8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                    ></path>
+                    <rect height="12" width="4" x="2" y="9"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mt-12 border-t border-white/10 pt-8 text-center">
+            <p class="text-text-secondary-light font-english text-sm">
+              © 2023 Abdulrahman Nashaat. All Rights Reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.getElementById("menu-button");
+        const closeMenuButton = document.getElementById("close-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const navLinks = mobileMenu.querySelectorAll("a");
+        function openMenu() {
+          mobileMenu.classList.add("open");
+        }
+        function closeMenu() {
+          mobileMenu.classList.remove("open");
+        }
+        menuButton.addEventListener("click", openMenu);
+        closeMenuButton.addEventListener("click", closeMenu);
+        // Close menu when a link is clicked
+        navLinks.forEach((link) => {
+          link.addEventListener("click", closeMenu);
+        });
+        // Hide loading spinner after a delay
+        setTimeout(() => {
+          const spinner = document.getElementById("loading-spinner");
+          if (spinner) {
+            spinner.style.display = "none";
+          }
+        }, 1500);
+      });
+    </script>
+  </body>
+</html>

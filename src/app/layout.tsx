@@ -8,17 +8,7 @@ import Footer from "./_components/common/Footer";
 import { Suspense } from "react";
 import Spinner from "./_components/common/Spinner";
 import { cookies } from "next/headers";
-
-const cairo = Cairo({
-  subsets: ["arabic"],
-  display: "swap",
-  variable: "--font-cairo",
-});
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-});
+import { Viewport } from "next";
 
 const icons = [
   {
@@ -52,12 +42,18 @@ const icons = [
   },
 ];
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1.0,
+};
+
 export async function generateMetadata() {
   const store = await cookies();
   const theme = store.get("NEXT_THEME")?.value === "dark" ? "dark" : "";
 
   return {
     title: { default: "AN", template: "%s | Portfolio" },
+
     description: "",
     icons: icons.map((icon) => ({
       ...icon,
@@ -66,6 +62,16 @@ export async function generateMetadata() {
   };
 }
 
+const cairo = Cairo({
+  subsets: ["arabic"],
+  display: "block",
+  variable: "--cairo",
+});
+const inter = Inter({
+  subsets: ["latin"],
+  display: "block",
+  variable: "--inter",
+});
 export default async function RootLayout({
   children,
 }: Readonly<{
@@ -74,21 +80,21 @@ export default async function RootLayout({
   const store = await cookies();
   const theme = store.get("NEXT_THEME")?.value === "dark" ? "dark" : "";
   const lang = store.get("NEXT_LOCALE")?.value || "en";
+
   const fontDisplayed =
     lang === "ar"
-      ? { fontFamily: cairo.style.fontFamily, lineHeight: 1.8 }
-      : { fontFamily: inter.style.fontFamily, lineHeight: 1.6 };
+      ? { fontFamily: cairo.style.fontFamily, lineHight: 1.8 }
+      : { fontFamily: inter.style.fontFamily, lineHight: 1.6 };
   return (
     <html
-      className={`${theme}  ${cairo.variable} ${inter.variable}`}
+      className={`${theme} ${cairo.variable} ${inter.variable} `}
       suppressHydrationWarning
       lang={lang}
       dir={lang === "ar" ? "rtl" : "ltr"}
       style={fontDisplayed}
     >
       <body
-        className={`font-base flex flex-col min-h-screen bg-background dark:bg-background-dark
-        `}
+        className={`selection:bg-primary dark:selection:bg-primary-dark bg-background dark:bg-background-dark lea flex min-h-screen flex-col selection:text-white`}
       >
         <NextIntlClientProvider>
           <AppRouterCacheProvider options={{ enableCssLayer: true }}>
