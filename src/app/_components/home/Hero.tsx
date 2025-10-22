@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Hero() {
-  const t = useTranslations("heroSection");
+  const t = useTranslations("home.heroSection");
   return (
     <section
       className="container mx-auto flex flex-col items-center gap-8 px-6 py-20 lg:flex-row lg:gap-12 lg:py-32"
@@ -19,13 +19,13 @@ export default function Hero() {
         </Typography>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row lg:items-start lg:justify-start">
           <Link
-            className="bg-primary dark:bg-primary-dark shadow-primary/20 hover:bg-opacity-90 text-primary-foreground dark:text-primary-foreground-dark w-5/10 transform rounded-full px-8 py-3 text-center font-bold shadow-lg transition-all duration-75 ease-linear hover:scale-105 lg:w-6/10"
+            className="bg-primary dark:bg-primary-dark shadow-primary/20 text-primary-foreground dark:text-primary-foreground-dark min-w-5/10 transform rounded-full px-8 py-3 text-center font-bold text-nowrap shadow-lg transition-all duration-75 ease-linear hover:scale-105 hover:opacity-90 lg:w-6/10"
             href="/portfolio"
           >
             {t("cta.portfolio")}
           </Link>
           <Link
-            className="border-primary dark:border-primary-dark text-primary dark:text-primary-dark hover:bg-primary/10 w-5/10 transform rounded-full border-2 bg-transparent px-8 py-3 text-center font-bold transition-all duration-75 ease-linear hover:scale-105 lg:w-6/10"
+            className="border-primary dark:border-primary-dark text-primary dark:text-primary-dark hover:bg-primary/10 min-w-5/10 transform rounded-full border-2 bg-transparent px-8 py-3 text-center font-bold text-nowrap transition-all duration-75 ease-linear hover:scale-105 lg:w-6/10"
             href="/contact"
           >
             {t("cta.contact")}

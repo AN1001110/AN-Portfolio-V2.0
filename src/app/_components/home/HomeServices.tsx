@@ -1,8 +1,9 @@
 import { useTranslations } from "next-intl";
 import React from "react";
+import HomeSkill from "@/src/app/_components/home/HomeSkill";
 
 export default function HomeServices() {
-  const t = useTranslations("homeServices");
+  const t = useTranslations("home.homeServices");
 
   return (
     <section
@@ -15,30 +16,18 @@ export default function HomeServices() {
         </h3>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <div className="bg-muted dark:bg-muted-dark dark:hover:shadow-primary-shadow-dark/30 hover:shadow-primary-shadow/30 ring-primary/50 dark:ring-primary-dark/50 rounded-lg border border-transparent p-8 shadow-lg transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_0_15px_5px] hover:ring-2">
-            <h4 className="mb-4 text-xl font-bold">
-              {t("services.service1.title")}
-            </h4>
-            <p className="dark:text-muted-foreground-dark text-muted-foreground">
-              {t("services.service1.description")}
-            </p>
-          </div>
-          <div className="bg-muted dark:bg-muted-dark dark:hover:shadow-primary-shadow-dark/30 hover:shadow-primary-shadow/30 ring-primary/50 dark:ring-primary-dark/50 rounded-lg border border-transparent p-8 shadow-lg transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_0_15px_5px] hover:ring-2">
-            <h4 className="mb-4 text-xl font-bold">
-              {t("services.service2.title")}
-            </h4>
-            <p className="dark:text-muted-foreground-dark text-muted-foreground">
-              {t("services.service2.description")}
-            </p>
-          </div>
-          <div className="bg-muted dark:bg-muted-dark dark:hover:shadow-primary-shadow-dark/30 hover:shadow-primary-shadow/30 ring-primary/50 dark:ring-primary-dark/50 rounded-lg border border-transparent p-8 shadow-lg transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_0_15px_5px] hover:ring-2">
-            <h4 className="mb-4 text-xl font-bold">
-              {t("services.service3.title")}
-            </h4>
-            <p className="dark:text-muted-foreground-dark text-muted-foreground">
-              {t("services.service3.description")}
-            </p>
-          </div>
+          <HomeSkill
+            title={t("services.service1.title")}
+            desc={t("services.service1.description")}
+          />
+          <HomeSkill
+            title={t("services.service2.title")}
+            desc={t("services.service2.description")}
+          />
+          <HomeSkill
+            title={t("services.service3.title")}
+            desc={t("services.service3.description")}
+          />
         </div>
       </div>
     </section>
