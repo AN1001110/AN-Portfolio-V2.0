@@ -32,6 +32,9 @@
         }
       }
     },
+    "skills": {
+      "title": "Core Skills"
+    },
     "contact": {
       "title": "Are you ready to start your next project with me?",
       "description": "Let's collaborate to turn your idea into a tangible reality. Contact me now to get started.",

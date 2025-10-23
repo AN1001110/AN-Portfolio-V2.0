@@ -75,3 +75,16 @@
 @utility min-h-screen {
   min-height: 100dvh;
 }
+
+/* @theme {
+  --color-tailwind: #0d9488;
+  --color-tailwind-dark: #2dd4bf;
+  --color-react: #2563eb;
+  --color-react-dark: #38bdf8;
+  --color-nextjs: #4b5563;
+  --color-nextjs-dark: #d1d5db;
+  --color-typescript: #3178c6;
+  --color-typescript-dark: #569cd6;
+  --color-javascript: #eab308;
+  --color-javascript-dark: #fde047;
+} */

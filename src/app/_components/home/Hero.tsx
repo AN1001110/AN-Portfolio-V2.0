@@ -17,15 +17,15 @@ export default function Hero() {
         <Typography className="text-secondary-light text-muted-foreground dark:text-muted-foreground-dark mx-auto mt-6 max-w-2xl text-lg md:text-xl lg:mx-0">
           {t("description")}
         </Typography>
-        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row lg:items-start lg:justify-start">
+        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row md:gap-6 lg:items-start lg:justify-start">
           <Link
-            className="bg-primary dark:bg-primary-dark shadow-primary/20 text-primary-foreground dark:text-primary-foreground-dark min-w-5/10 transform rounded-full px-8 py-3 text-center font-bold text-nowrap shadow-lg transition-all duration-75 ease-linear hover:scale-105 hover:opacity-90 lg:w-6/10"
+            className="bg-primary dark:bg-primary-dark shadow-primary/20 text-primary-foreground dark:text-primary-foreground-dark min-w-5/10 transform rounded-full px-8 py-3 text-center font-bold text-nowrap shadow-lg transition-all duration-75 ease-linear hover:scale-105 hover:opacity-90"
             href="/portfolio"
           >
             {t("cta.portfolio")}
           </Link>
           <Link
-            className="border-primary dark:border-primary-dark text-primary dark:text-primary-dark hover:bg-primary/10 min-w-5/10 transform rounded-full border-2 bg-transparent px-8 py-3 text-center font-bold text-nowrap transition-all duration-75 ease-linear hover:scale-105 lg:w-6/10"
+            className="border-primary dark:border-primary-dark text-primary dark:text-primary-dark hover:bg-primary/10 min-w-5/10 transform rounded-full border-2 bg-transparent px-8 py-3 text-center font-bold text-nowrap transition-all duration-75 ease-linear hover:scale-105"
             href="/contact"
           >
             {t("cta.contact")}

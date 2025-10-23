@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import React from "react";
-import HomeSkill from "@/src/app/_components/home/HomeSkill";
+import HomeSkill from "@/src/app/_components/home/HomeService";
 
 export default function HomeServices() {
   const t = useTranslations("home.homeServices");

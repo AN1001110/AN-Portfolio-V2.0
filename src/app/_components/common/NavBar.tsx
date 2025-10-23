@@ -27,6 +27,7 @@ import { useThemeStore } from "../../_lib/store/useThemeStore";
 import { toggleThemeInServer } from "../../_lib/actions/themeAction";
 import Button from "@mui/material/Button";
 import { usePathname } from "next/navigation";
+import useMounted from "../../hooks/useMounted";
 
 const pages = [
   { route: "/", name: "home" },
@@ -64,15 +65,11 @@ export default function NavBar() {
   const { theme, setTheme } = useThemeStore();
   const t = useTranslations("navBar");
 
-  const [mounted, setMounted] = useState<boolean>(false);
+  const { isMounted } = useMounted();
 
   const param = usePathname();
 
   const isDark: boolean = theme === "dark";
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   async function toggleLang() {
     const newLang = lang === "ar" ? "en" : "ar";
@@ -102,7 +99,7 @@ export default function NavBar() {
     });
   }
 
-  if (isPending || !mounted) return <Spinner />;
+  if (isPending || !isMounted) return <Spinner />;
   return (
     <AppBar
       className="bg-background dark:bg-background-dark border-b-primary/20 dark:border-b-primary-dark/20 relative z-[49] border-b-2"
@@ -162,7 +159,7 @@ export default function NavBar() {
                 disabled={isPending}
                 onClick={toggleTheme}
               >
-                {theme === "light" && mounted ? (
+                {theme === "light" && isMounted ? (
                   <MoonIcon className="text-muted-foreground dark:text-muted-foreground-dark hover:text-primary dark:hover:text-primary-dark aspect-square h-6 w-6 font-bold" />
                 ) : (
                   <SunIcon className="text-muted-foreground dark:text-muted-foreground-dark hover:text-primary dark:hover:text-primary-dark h-7 w-7 font-bold" />
@@ -176,7 +173,7 @@ export default function NavBar() {
               >
                 <GlobeAltIcon className="h-6 w-6" />
                 <Typography variant="body1">
-                  {mounted && lang === "ar" ? (
+                  {isMounted && lang === "ar" ? (
                     <span className="font-inter leading-[1.6]">En</span>
                   ) : (
                     <span className="font-cairo leading-[1.8]">ع</span>
