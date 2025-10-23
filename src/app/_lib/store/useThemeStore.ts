@@ -10,7 +10,7 @@ interface ThemeState {
 const getDefaultTheme = () => {
   const theme = getCookie("NEXT_THEME");
   if (theme) return theme;
-  return "light"; // Default fallback for SSR
+  return "dark"; // Default fallback for SSR
 };
 
 export const useThemeStore = create<ThemeState>()((set) => ({

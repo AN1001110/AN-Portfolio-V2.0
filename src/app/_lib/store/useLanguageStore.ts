@@ -9,7 +9,7 @@ interface LanguageState {
 }
 
 export const useLanguageStore = create<LanguageState>((set) => ({
-  lang: getCookie("NEXT_LOCALE") || "en",
+  lang: getCookie("NEXT_LOCALE") || "ar",
   setLang: (lang: LanguageState["lang"]) => {
     set({ lang });
   },

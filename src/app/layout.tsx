@@ -78,9 +78,8 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const store = await cookies();
-  const theme = store.get("NEXT_THEME")?.value === "dark" ? "dark" : "";
-  const lang = store.get("NEXT_LOCALE")?.value || "en";
-
+  const theme = store.get("NEXT_THEME")?.value === "light" ? "light" : "dark";
+  const lang = store.get("NEXT_LOCALE")?.value || "ar";
   const fontDisplayed =
     lang === "ar"
       ? { fontFamily: cairo.style.fontFamily, lineHight: 1.8 }
