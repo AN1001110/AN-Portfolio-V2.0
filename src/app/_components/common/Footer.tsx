@@ -24,7 +24,7 @@ export default function Footer(): React.ReactNode {
             <h5 className="text-secondary dark:text-secondary-dark mb-4 text-lg font-bold">
               {t("about.title")}
             </h5>
-            <p className="text-sm">{t("about.description")}</p>
+            <p className="text-start text-sm">{t("about.description")}</p>
           </div>
           <div className="flex flex-col justify-center md:items-center lg:items-start">
             <h5 className="text-primary dark:text-primary-dark mb-4 text-lg font-bold">

@@ -27,7 +27,7 @@ export default function ProgressBar({ progress, name, color }: Progress) {
           initial={{ width: 0 }}
           whileInView={{ width: `${progress}%` }}
           viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 3, ease: "easeInOut" }}
+          transition={{ delay: 0.3, duration: 2.7, ease: "easeInOut" }}
           style={{ backgroundColor: barColor }}
         />
       </div>

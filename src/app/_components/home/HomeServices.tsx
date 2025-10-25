@@ -1,14 +1,18 @@
 import { useTranslations } from "next-intl";
 import React from "react";
 import HomeSkill from "@/src/app/_components/home/HomeService";
+import { motion } from "motion/react";
 
 export default function HomeServices() {
   const t = useTranslations("home.homeServices");
 
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
       className="bg-muted dark:bg-muted-dark text-card-foreground dark:text-card-foreground-dark py-20"
-      id="services"
     >
       <div className="container mx-auto px-6">
         <h3 className="bg-muted dark:bg-muted-dark text-card-foreground dark:text-card-foreground-dark relative mb-12 text-center text-3xl font-bold uppercase italic">
@@ -30,6 +34,6 @@ export default function HomeServices() {
           />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

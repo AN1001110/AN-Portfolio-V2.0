@@ -2,13 +2,17 @@ import Typography from "@mui/material/Typography";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "motion/react";
 
 export default function Hero() {
   const t = useTranslations("home.heroSection");
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
       className="container mx-auto flex flex-col items-center gap-8 px-6 py-20 lg:flex-row lg:gap-12 lg:py-32"
-      id="hero"
     >
       <div className="order-2 flex flex-col lg:order-1 lg:flex-2">
         <h2 className="` text-muted-foreground dark:text-muted-foreground-dark text-center text-4xl leading-tight font-bold md:text-5xl lg:text-start lg:text-6xl">
@@ -41,6 +45,6 @@ export default function Hero() {
           alt="AN Personal Image"
         />
       </div>
-    </section>
+    </motion.section>
   );
 }

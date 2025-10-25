@@ -38,10 +38,7 @@ export default function HomeSkills() {
   ];
 
   return (
-    <section
-      className="bg-muted dark:bg-muted-dark text-card-foreground dark:text-card-foreground-dark py-20"
-      id="services"
-    >
+    <section className="bg-muted dark:bg-muted-dark text-card-foreground dark:text-card-foreground-dark py-20">
       <div className="container mx-auto px-6">
         <h3 className="bg-muted dark:bg-muted-dark text-card-foreground dark:text-card-foreground-dark relative mb-12 text-center text-3xl font-bold uppercase italic">
           {t("title")}

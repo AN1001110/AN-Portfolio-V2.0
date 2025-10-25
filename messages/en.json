@@ -32,6 +32,17 @@
         }
       }
     },
+    "projects": {
+      "title": "Distinguished Projects",
+      "project1": {
+        "title": "Al-Maheroun Academy",
+        "desc": "An introductory website for an academy for the memorization of the Holy Quran"
+      },
+      "project2": {
+        "title": "AN Portfolio",
+        "desc": "A portfolio for a front-end developer"
+      }
+    },
     "skills": {
       "title": "Core Skills"
     },
