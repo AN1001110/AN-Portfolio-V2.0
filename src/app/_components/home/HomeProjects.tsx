@@ -23,7 +23,7 @@ export default function HomeProjects() {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ delay: 0.5, duration: 0.5 }}
+      transition={{ delay: 0.3, duration: 0.5 }}
       className="bg-background dark:bg-background-dark text-card-foreground dark:text-card-foreground-dark py-20"
     >
       <div className="container mx-auto px-6">

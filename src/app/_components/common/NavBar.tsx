@@ -21,7 +21,7 @@ import Logo from "./Logo";
 import { useTranslations } from "next-intl";
 import { useLanguageStore } from "@/src/app/_lib/store/useLanguageStore";
 import { toggleLanguageInServer } from "../../_lib/actions/langAction";
-import { useEffect, useState, useTransition } from "react";
+import { useEffect, useRef, useState, useTransition } from "react";
 import Spinner from "./Spinner";
 import { useThemeStore } from "../../_lib/store/useThemeStore";
 import { toggleThemeInServer } from "../../_lib/actions/themeAction";
@@ -58,6 +58,9 @@ export default function NavBar() {
   const { width } = useScreenDimensions();
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const menuRef = useRef<HTMLDivElement>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
 
   const [isPending, startTransition] = useTransition();
 
@@ -98,12 +101,44 @@ export default function NavBar() {
       }
     });
   }
+  function handleMenuToggle(e: React.MouseEvent<HTMLButtonElement>): void {
+    e.stopPropagation();
+    setIsOpen((prev) => !prev);
+  }
+
+  useEffect(() => {
+    function handleScroll(): void {
+      if (isOpen) {
+        setIsOpen(false);
+      }
+    }
+
+    function handleClickOutside(event: MouseEvent): void {
+      if (
+        isOpen &&
+        menuRef.current &&
+        menuButtonRef.current &&
+        !menuRef.current.contains(event.target as HTMLElement) &&
+        !menuButtonRef.current.contains(event.target as HTMLElement)
+      ) {
+        setIsOpen(false);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [isOpen]);
 
   if (isPending || !isMounted) return <Spinner />;
   return (
     <AppBar
-      className="bg-background dark:bg-background-dark border-b-primary/20 dark:border-b-primary-dark/20 relative z-[49] border-b-2"
-      position="fixed"
+      className="bg-background dark:bg-background-dark border-b-primary/20 dark:border-b-primary-dark/20 z-[49] border-b-2"
+      position="sticky"
       variant="outlined"
     >
       <Toolbar component={"nav"} variant="dense">
@@ -117,7 +152,9 @@ export default function NavBar() {
           />
           <IconButton
             className="block md:hidden"
-            onClick={() => setIsOpen((isOpen) => !isOpen)}
+            onClick={handleMenuToggle}
+            disabled={isPending}
+            ref={menuButtonRef}
           >
             <Bars3Icon
               className={`text-muted-foreground dark:text-muted-foreground-dark hover:text-primary dark:hover:text-primary-dark h-8 w-8 font-bold`}
@@ -125,6 +162,7 @@ export default function NavBar() {
           </IconButton>
 
           <motion.div
+            ref={menuRef}
             initial={false}
             animate={isOpen || width >= 768 ? "open" : "close"}
             variants={navVariants}
