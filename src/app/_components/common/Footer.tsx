@@ -20,7 +20,7 @@ export default function Footer(): React.ReactNode {
     <footer className="bg-background dark:bg-background-dark dark:text-muted-foreground-dark text-muted-foreground border-primary/20 relative overflow-hidden border-t pt-16 pb-8">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-2 md:text-right lg:grid-cols-4">
-          <div className="flex flex-col justify-center md:items-center lg:col-span-1 lg:items-start">
+          <div className="flex flex-col md:items-center lg:col-span-1 lg:items-start">
             <h5 className="text-secondary dark:text-secondary-dark mb-4 text-lg font-bold">
               {t("about.title")}
             </h5>
@@ -43,7 +43,7 @@ export default function Footer(): React.ReactNode {
               ))}
             </ul>
           </div>
-          <div className="flex flex-col justify-center md:items-center lg:items-start">
+          <div className="flex flex-col md:items-center lg:items-start">
             <h5 className="text-primary dark:text-primary-dark mb-4 text-lg font-bold md:items-end">
               {t("contact.title")}
             </h5>

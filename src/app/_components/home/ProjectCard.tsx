@@ -16,11 +16,11 @@ export default function ProjectCard({
 }: ProjectProps): React.ReactNode {
   return (
     <Link href={link}>
-      <div className="border-border bg-card dark:bg-card-dark dark:border-border-dark dark:bg-card-background-dark flex flex-col gap-4 rounded-lg border shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg">
-        <div className="relative h-68 w-full overflow-hidden rounded-md">
+      <div className="border-border bg-card dark:bg-card-dark dark:border-border-dark dark:bg-card-background-dark dark:shadow-card-foreground-dark/10 shadow-card-foreground/10 flex flex-col gap-4 rounded-lg border transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+        <div className="relative h-68 w-full overflow-hidden rounded-t-md select-none">
           <Image
             fill
-            className="inset-0 rounded-md object-cover"
+            className="inset-0 object-cover"
             src={imageUrl}
             alt={`img for project ${title}`}
           />
