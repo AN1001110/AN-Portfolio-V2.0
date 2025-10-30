@@ -1,6 +1,6 @@
 import { Cairo, Inter } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
-
+import { Analytics } from "@vercel/analytics/next";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import "./globals.css";
 import Header from "./_components/common/Header";
@@ -98,7 +98,10 @@ export default async function RootLayout({
         <NextIntlClientProvider>
           <AppRouterCacheProvider options={{ enableCssLayer: true }}>
             <Header />
-            <Suspense fallback={<Spinner />}>{children}</Suspense>
+            <Suspense fallback={<Spinner />}>
+              {children}
+              <Analytics />
+            </Suspense>
           </AppRouterCacheProvider>
         </NextIntlClientProvider>
         <Footer />
