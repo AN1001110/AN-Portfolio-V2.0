@@ -14,7 +14,7 @@ export default function Hero() {
       transition={{ duration: 0.5 }}
       className="container mx-auto flex flex-col items-center gap-8 px-6 py-20 lg:flex-row lg:gap-12 lg:py-32"
     >
-      <div className="order-2 flex flex-col items-center lg:order-1 lg:flex-2">
+      <div className="order-2 flex flex-col items-center text-center lg:order-1 lg:flex-2 lg:text-start">
         <h2 className="` text-muted-foreground dark:text-muted-foreground-dark text-center text-4xl leading-tight font-bold md:text-5xl lg:text-start lg:text-6xl">
           {t("title")}
         </h2>

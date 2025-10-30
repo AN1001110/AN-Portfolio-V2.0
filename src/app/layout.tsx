@@ -49,7 +49,7 @@ export const viewport: Viewport = {
 
 export async function generateMetadata() {
   const store = await cookies();
-  const theme = store.get("NEXT_THEME")?.value === "dark" ? "dark" : "";
+  const theme = store.get("NEXT_THEME")?.value || "dark";
 
   return {
     title: { default: "AN", template: "%s | Portfolio" },
@@ -78,7 +78,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const store = await cookies();
-  const theme = store.get("NEXT_THEME")?.value === "light" ? "light" : "dark";
+  const theme = store.get("NEXT_THEME")?.value || "dark";
   const lang = store.get("NEXT_LOCALE")?.value || "ar";
   const fontDisplayed =
     lang === "ar"

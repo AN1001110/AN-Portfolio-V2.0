@@ -52,6 +52,74 @@
       "cta_button": "Contact me"
     }
   },
+  "about": {
+    "hero": {
+      "title": "In the name of Allah, the Most Gracious, the Most Merciful.",
+      "description1": "Seeking Allah's help, I begin my journey as 'Abdulrahman Nashaat,' a Front-End Developer. Allah has blessed me with a passion that combines the mastery of programming and the sciences of agriculture. By the grace of Allah, I possess skills in building modern web applications using React and Next.js, expertise that was deepened during my training at the Information Technology Institute (ITI).",
+      "description2": "As a student of Plant Protection, Allah has gifted me a love for His earth and an understanding of its challenges. I believe, by Allah's guidance, that technology is a means for the 'cultivation of the Earth' in which He has made us stewards, and agriculture is a fundamental pillar of that.",
+      "description3": "My mission is to harness the technology my Lord has taught me to serve this blessed sector. I aim to develop beneficial 'AgriTech' solutions that bless the effort and aid farmers and engineers, contributing to the sustainability of our resources and our food security, mindful of the words of the Almighty:",
+      "quote": "Cooperate with one another in goodness and righteousness, and do not cooperate in sin and transgression.",
+      "description4": "I ask Allah to open the doors of goodness for me, and to bless me with a righteous work environment where I can offer knowledge that benefits others, and be part of a more prosperous and flourishing agricultural future."
+    },
+    "timeline": {
+      "title": "My Journey",
+      "step1": {
+        "title": "Laying the Foundation (Programming)",
+        "date": "Summer 2024",
+        "description": "During the first-year college break, I began my journey learning Front-End development and web fundamentals."
+      },
+      "step2": {
+        "title": "Refining Skills through Practice",
+        "date": "Oct 2024",
+        "description": "Moving from 'learning' to 'application' by building personal and experimental projects, developing practical experience."
+      },
+      "step3": {
+        "title": "Defining the Academic Path",
+        "date": "Feb 2025",
+        "description": "Starting specialized academic studies in Agricultural Sciences, which opened the door to link technology with agricultural sciences."
+      },
+      "step4": {
+        "title": "Intensive Training (ITI)",
+        "date": "July 2025",
+        "description": "Completed the 'Web Development using React' program (120 hrs) at the Information Technology Institute (ITI) to refine my skills."
+      },
+      "step5": {
+        "title": "Towards Professionalism (Next.js & Redux)",
+        "date": "Sept 2025",
+        "description": "Completed 'The Ultimate React Course' to learn Next.js, Redux, and advanced development skills."
+      },
+      "step6": {
+        "title": "The Current Mission: AgriTech",
+        "date": "Present",
+        "description": "Dedicating acquired skills (programming + agriculture) to develop innovative solutions, striving to achieve the vision mentioned in the summary."
+      }
+    },
+    "education": {
+      "title": "Academic Education",
+      "item1": {
+        "degree": "Bachelor's in Agricultural Sciences",
+        "university": "Fayoum University",
+        "date": "2023 - 2027"
+      }
+    },
+    "certificates": {
+      "title": "Certificates & Training",
+      "placeholder": "Issuer Logo",
+      "cert1": {
+        "title": "Web Development using React Js (120 hrs)",
+        "issuer": "Information Technology Institute (ITI)"
+      },
+      "cert2": {
+        "title": "The Ultimate React Course 2025: React, Next.js, Redux & More",
+        "issuer": "Udemy / Jonas Schmedtmann"
+      },
+      "cert3": {
+        "title": "Pesticide Fundamentals Exam Passage",
+        "issuer": "Agricultural Pesticides Committee"
+      }
+    }
+  },
+
   "footer": {
     "about": {
       "title": "About Me",

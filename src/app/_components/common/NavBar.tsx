@@ -148,7 +148,7 @@ export default function NavBar() {
         >
           <Logo
             src={theme === "dark" ? "/Logo-Dark.png" : "/Logo-Light.png"}
-            className="block aspect-square h-12 w-12 bg-transparent md:h-15 md:w-15"
+            className="linear block aspect-square h-12 w-12 bg-transparent transition-all duration-150 hover:scale-105 hover:opacity-90 md:h-15 md:w-15"
           />
           <IconButton
             className="block md:hidden"
