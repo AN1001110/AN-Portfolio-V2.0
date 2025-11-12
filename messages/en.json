@@ -54,12 +54,16 @@
   },
   "about": {
     "hero": {
-      "title": "In the name of Allah, the Most Gracious, the Most Merciful.",
-      "description1": "Seeking Allah's help, I begin my journey as 'Abdulrahman Nashaat,' a Front-End Developer. Allah has blessed me with a passion that combines the mastery of programming and the sciences of agriculture. By the grace of Allah, I possess skills in building modern web applications using React and Next.js, expertise that was deepened during my training at the Information Technology Institute (ITI).",
-      "description2": "As a student of Plant Protection, Allah has gifted me a love for His earth and an understanding of its challenges. I believe, by Allah's guidance, that technology is a means for the 'cultivation of the Earth' in which He has made us stewards, and agriculture is a fundamental pillar of that.",
-      "description3": "My mission is to harness the technology my Lord has taught me to serve this blessed sector. I aim to develop beneficial 'AgriTech' solutions that bless the effort and aid farmers and engineers, contributing to the sustainability of our resources and our food security, mindful of the words of the Almighty:",
-      "quote": "Cooperate with one another in goodness and righteousness, and do not cooperate in sin and transgression.",
-      "description4": "I ask Allah to open the doors of goodness for me, and to bless me with a righteous work environment where I can offer knowledge that benefits others, and be part of a more prosperous and flourishing agricultural future."
+      "title": "About Me",
+      "subtitle": "Front-end Developer | AgriTech Pioneer",
+      "summary": "I am Abdulrahman Nashaat, a React/Next.js developer and an Agricultural Science student. My mission is to build the bridge between two worlds, developing impactful AgriTech solutions, with Allah's help, that serve the farmer and contribute to a sustainable future, by Allah's will."
+    },
+    "story": {
+      "p1": "In the name of Allah, the Most Gracious, the Most Merciful. My compass has always been a profound belief: that we are 'stewards upon the Earth,' entrusted with its cultivation. This is not just a belief, but a call to action, and by Allah's grace, it led me to a passion at a unique intersection: the world of 'The Land' and the world of 'Logic & Programming.'",
+      "p2": "My first path was 'The Land.' As a student at the Faculty of Agricultural Science, I witnessed the challenge firsthand. I saw a vast gap between the ancient wisdom of the field and the immense potential of technology. I saw data being lost and decisions made on intuition alone. I realized 'passion' for agriculture needed 'tools' to truly flourish.",
+      "p3": "Here, by Allah's guidance, I began the second path: 'Programming.' This was not a career change; it was 'equipping for the mission.' At the Information Technology Institute (ITI), I honed my skills as a Front-End Developer. I didn't just learn React and Next.js as technologies; I learned them as tools to build 'bridges' and solve problems.",
+      "p4": "My mission, by Allah's will, is to *be* that 'Bridge.' I am not just a developer who writes code, nor just an agricultural student who analyzes soil. I am an 'AgriTech' developer who comes from the heart of the field. My goal is clear: to transform complex data into 'impactful tools' and clear insights that serve the farmer and the engineer.",
+      "p5": "I believe this work is 'cooperation in righteousness and piety.' I ask Allah to open the doors of goodness for me, and to bless me with a righteous work environment where I can contribute beneficial knowledge, and be part of a more sustainable and prosperous agricultural future, by Allah's will."
     },
     "timeline": {
       "title": "My Journey",
@@ -94,17 +98,10 @@
         "description": "Dedicating acquired skills (programming + agriculture) to develop innovative solutions, striving to achieve the vision mentioned in the summary."
       }
     },
-    "education": {
-      "title": "Academic Education",
-      "item1": {
-        "degree": "Bachelor's in Agricultural Sciences",
-        "university": "Fayoum University",
-        "date": "2023 - 2027"
-      }
-    },
+
     "certificates": {
       "title": "Certificates & Training",
-      "placeholder": "Issuer Logo",
+
       "cert1": {
         "title": "Web Development using React Js (120 hrs)",
         "issuer": "Information Technology Institute (ITI)"

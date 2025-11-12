@@ -1,10 +1,11 @@
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import MotionSection from "../../_components/MotionSection";
 
 export default function HomeContact() {
   const t = useTranslations("home.contact");
   return (
-    <section className="py-20">
+    <MotionSection className="py-20">
       <div className="dark:text-muted-foreground-dark text-muted-foreground container mx-auto px-6 text-center">
         <h2 className="mx-auto max-w-3xl text-3xl font-bold md:text-4xl">
           {t("title")}
@@ -19,6 +20,6 @@ export default function HomeContact() {
           {t("cta_button")}
         </Link>
       </div>
-    </section>
+    </MotionSection>
   );
 }

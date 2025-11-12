@@ -21,7 +21,6 @@
     "@hookform/resolvers": "^5.2.2",
     "@mui/material": "^7.3.4",
     "@mui/material-nextjs": "^7.3.3",
-    "@vercel/analytics": "^1.5.0",
     "cookies-next": "^6.1.0",
     "motion": "^12.23.22",
     "next": "16.0.1",

@@ -1,12 +1,11 @@
 import { Cairo, Inter } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
-import { Analytics } from "@vercel/analytics/next";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import "./globals.css";
-import Header from "./_components/common/Header";
-import Footer from "./_components/common/Footer";
+import Header from "./_components/Header";
+import Footer from "./_components/Footer";
 import { Suspense } from "react";
-import Spinner from "./_components/common/Spinner";
+import Spinner from "./_components/Spinner";
 import { cookies } from "next/headers";
 import { Viewport } from "next";
 
@@ -53,7 +52,7 @@ export async function generateMetadata() {
 
   return {
     title: { default: "AN", template: "%s | Portfolio" },
-
+    charset: "UTF-8",
     description: "",
     icons: icons.map((icon) => ({
       ...icon,
@@ -98,10 +97,7 @@ export default async function RootLayout({
         <NextIntlClientProvider>
           <AppRouterCacheProvider options={{ enableCssLayer: true }}>
             <Header />
-            <Suspense fallback={<Spinner />}>
-              {children}
-              <Analytics />
-            </Suspense>
+            <Suspense fallback={<Spinner />}>{children}</Suspense>
           </AppRouterCacheProvider>
         </NextIntlClientProvider>
         <Footer />

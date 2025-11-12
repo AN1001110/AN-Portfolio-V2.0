@@ -2,15 +2,13 @@ import Typography from "@mui/material/Typography";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "motion/react";
-
-export default function Hero() {
+import * as motion from "motion/react-client";
+export default function HeroHome() {
   const t = useTranslations("home.heroSection");
   return (
     <motion.section
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className="container mx-auto flex flex-col items-center gap-8 px-6 py-20 lg:flex-row lg:gap-12 lg:py-32"
     >
@@ -37,7 +35,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="bg-accent/30 relative order-1 h-56 w-56 rounded-full bg-cover bg-center sm:h-64 sm:w-64 md:h-80 md:w-80 lg:order-2">
+      <div className="bg-muted/60 dark:bg-muted-dark/60 relative order-1 h-56 w-56 rounded-full bg-cover bg-center sm:h-64 sm:w-64 md:h-80 md:w-80 lg:order-2">
         <Image
           className="border-primary dark:border-primary-dark absolute inset-0 rounded-full border-4"
           fill

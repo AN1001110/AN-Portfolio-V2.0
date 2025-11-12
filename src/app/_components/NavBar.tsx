@@ -6,7 +6,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import MuiLink from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
-import { useScreenDimensions } from "../../hooks/useScreenDimensions";
+import { useScreenDimensions } from "../hooks/useScreenDimensions";
 // import * as motion from "motion/react-client";
 import { motion, Variants } from "motion/react";
 import {
@@ -20,14 +20,14 @@ import Link from "next/link";
 import Logo from "./Logo";
 import { useTranslations } from "next-intl";
 import { useLanguageStore } from "@/src/app/_lib/store/useLanguageStore";
-import { toggleLanguageInServer } from "../../_lib/actions/langAction";
+import { toggleLanguageInServer } from "../_lib/actions/langAction";
 import { useEffect, useRef, useState, useTransition } from "react";
 import Spinner from "./Spinner";
-import { useThemeStore } from "../../_lib/store/useThemeStore";
-import { toggleThemeInServer } from "../../_lib/actions/themeAction";
+import { useThemeStore } from "../_lib/store/useThemeStore";
+import { toggleThemeInServer } from "../_lib/actions/themeAction";
 import Button from "@mui/material/Button";
 import { usePathname } from "next/navigation";
-import useMounted from "../../hooks/useMounted";
+import useMounted from "../hooks/useMounted";
 
 const pages = [
   { route: "/", name: "home" },

@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 import { useThemeStore } from "@/src/app/_lib/store/useThemeStore";
-import useMounted from "../../hooks/useMounted";
+import useMounted from "../hooks/useMounted";
 interface Progress {
   name: string;
   progress: number;

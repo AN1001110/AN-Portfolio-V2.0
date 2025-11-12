@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
-import ProjectCard from "./ProjectCard";
-import { motion } from "motion/react";
+import Card from "../../_components/Card";
+import MotionSection from "../../_components/MotionSection";
 
 export default function HomeProjects() {
   const t = useTranslations("home.projects");
@@ -19,23 +19,17 @@ export default function HomeProjects() {
     },
   ];
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: 0.3, duration: 0.5 }}
-      className="bg-background dark:bg-background-dark text-card-foreground dark:text-card-foreground-dark py-20"
-    >
+    <MotionSection className="bg-background dark:bg-background-dark text-card-foreground dark:text-card-foreground-dark py-20">
       <div className="container mx-auto px-6">
         <h3 className="dark:text-muted-foreground-dark text-muted-foreground relative mb-12 text-center text-3xl font-bold uppercase italic">
           {t("title")}
         </h3>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
           {projects.map((project) => (
-            <ProjectCard key={project.title} {...project} />
+            <Card key={project.title} {...project} />
           ))}
         </div>
       </div>
-    </motion.section>
+    </MotionSection>
   );
 }

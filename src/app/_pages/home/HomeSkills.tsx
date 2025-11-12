@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import ProgressBar from "./ProgressBar";
+import ProgressBar from "../../_components/ProgressBar";
 
 export default function HomeSkills() {
   const t = useTranslations("home.skills");
