@@ -26,7 +26,7 @@ export default function TimeLine(): React.ReactNode {
 
   return (
     <section className="bg-muted dark:bg-muted-dark mx-auto px-6 py-20 lg:gap-12 lg:py-32">
-      <h1 className="dark:text-muted-foreground-dark text-muted-foreground relative mb-20 text-center text-3xl font-bold uppercase italic">
+      <h1 className="dark:text-muted-foreground-dark text-muted-foreground mb-20 text-center text-3xl font-bold uppercase italic">
         {t("title")}
       </h1>
       {timelineItems}
