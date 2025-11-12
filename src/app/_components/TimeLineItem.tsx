@@ -2,6 +2,7 @@
 import { motion } from "motion/react";
 import { useRef } from "react";
 import { useScreenDimensions } from "../hooks/useScreenDimensions";
+import { useLanguageStore } from "../_lib/store/useLanguageStore";
 interface TimelineItemProps {
   date: string;
   title: string;
@@ -20,7 +21,10 @@ export default function TimelineItem({
   const isEven = itemNumber % 2 === 0;
 
   const { width } = useScreenDimensions();
-  const isMobile = width < 768;
+
+  const dir: number = useLanguageStore((state) => state.lang) === "ar" ? 1 : -1;
+  const isMobile: boolean = width < 768;
+
   return (
     <div className="relative flex items-center justify-center">
       <div className="absolute start-0 top-0 flex h-full w-8 flex-col items-center sm:translate-x-0 md:right-1/2 md:translate-x-1/2">
@@ -53,17 +57,15 @@ export default function TimelineItem({
         }}
       >
         <motion.div
-          initial={{
-            opacity: 0,
-            x: !isMobile ? (isEven ? 100 : -100) : 0,
-            y: isMobile ? 50 : 0,
-          }}
-          whileInView={{ opacity: 1, x: 0, y: 0 }}
+          initial={false}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.6 }}
           style={{
             textAlign: isMobile ? "start" : isEven ? "end" : "start",
             marginBottom: isLast ? "0" : "14rem",
+            x: isMobile ? 50 * dir : isEven ? 50 : -50,
+            opacity: 0,
           }}
           className="flex flex-col justify-center px-6 md:w-1/2"
         >

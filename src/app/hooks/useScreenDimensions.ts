@@ -1,13 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 
 export function useScreenDimensions() {
   const [screenSize, setScreenSize] = useState({
     width: 0,
     height: 0,
   });
-  useEffect(() => {
+  useLayoutEffect(() => {
     function handleResize() {
       setScreenSize({
         width: window.innerWidth,
