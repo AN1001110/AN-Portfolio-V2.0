@@ -116,7 +116,72 @@
       }
     }
   },
-
+  "portfolio": {
+    "coreCompetencies": {
+      "title": "Core Technical Competencies",
+      "description": "A detailed breakdown of my technical skills as a Front-End Developer specializing in building interactive web applications.",
+      "sections": [
+        {
+          "title": "Languages & Core Tech",
+          "skills": [
+            { "name": "JavaScript (ES6+)", "progress": 4 },
+            { "name": "TypeScript (TS)", "progress": 3 },
+            { "name": "HTML5", "progress": 4 },
+            { "name": "CSS3", "progress": 4 }
+          ]
+        },
+        {
+          "title": "Frameworks & Libraries",
+          "skills": [
+            { "name": "React", "progress": 4 },
+            { "name": "Next.js", "progress": 3 },
+            { "name": "React Query", "progress": 3 },
+            { "name": "Zustand", "progress": 3 },
+            { "name": "Tailwind CSS", "progress": 3 }
+          ]
+        },
+        {
+          "title": "Tools & Platforms",
+          "skills": [
+            { "name": "Git & GitHub", "progress": 4 },
+            { "name": "Node.js", "progress": 2 },
+            { "name": "Postman", "progress": 2 }
+          ]
+        }
+      ]
+    },
+    "additionalExpertise": {
+      "title": "Additional Expertise",
+      "description": "Bridging the gap between technology and traditional agriculture, complemented by essential interpersonal abilities.",
+      "sections": {
+        "agriculture": {
+          "title": "Agricultural Expertise (Plant Protection)",
+          "skills": [
+            "Crop Management",
+            "Soil Science",
+            "Irrigation Systems",
+            "Plant Pathology",
+            "Sustainable Agriculture",
+            "AgriTech"
+          ]
+        },
+        "soft_skills": {
+          "title": "Soft Skills",
+          "skills": [
+            "Teamwork & Collaboration",
+            "Effective Communication",
+            "Analytical Problem-Solving",
+            "Agile & Time Management",
+            "Leadership & Mentoring"
+          ]
+        }
+      }
+    },
+    "philosophy": {
+      "title": "My Philosophy & Mission",
+      "quote": "In the name of Allah, the Most Gracious, the Most Merciful. Believing in the responsibility of stewardship (Istikhlaf) on Earth, I unite the 'craft' of technology and the 'science' of agriculture, striving to make every line of code a blessed seed in the field of the future, seeking the pleasure of Allah and the aid of His creation."
+    }
+  },
   "footer": {
     "about": {
       "title": "About Me",

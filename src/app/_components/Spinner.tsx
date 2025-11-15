@@ -1,5 +1,5 @@
 import Box from "@mui/material/Box";
-import CircularProgress from "@mui/material/CircularProgress";
+import Circularprogress from "@mui/material/Circularprogress";
 
 export default function Spinner(): React.ReactNode {
   return (
@@ -32,7 +32,7 @@ export default function Spinner(): React.ReactNode {
           zIndex: 51,
         }}
       >
-        <CircularProgress
+        <Circularprogress
           className="text-primary dark:text-primary-dark"
           size={40}
         />

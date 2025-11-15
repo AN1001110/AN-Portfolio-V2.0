@@ -2,11 +2,12 @@
 
 import { useTranslations } from "next-intl";
 import TimelineItem from "./TimeLineItem";
+import { JSXElementConstructor } from "react";
 
 export default function TimeLine(): React.ReactNode {
   const t = useTranslations("about.timeline");
 
-  const timelineItems: any = [];
+  const timelineItems: (React.ReactElement | never)[] = [];
   for (let i = 1; i <= 6; i++) {
     const stepKey = `step${i}`;
     const title = t(stepKey + ".title");

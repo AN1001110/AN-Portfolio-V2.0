@@ -3,13 +3,13 @@
 import { motion } from "motion/react";
 import { useThemeStore } from "@/src/app/_lib/store/useThemeStore";
 import useMounted from "../hooks/useMounted";
-interface Progress {
+interface progress {
   name: string;
   progress: number;
   color: { [key: string]: string };
 }
 
-export default function ProgressBar({ progress, name, color }: Progress) {
+export default function progressBar({ progress, name, color }: progress) {
   const { theme } = useThemeStore();
   const { isMounted } = useMounted();
 
@@ -19,7 +19,7 @@ export default function ProgressBar({ progress, name, color }: Progress) {
     <div className="w-full">
       <div className="dark:text-muted-foreground-dark text-muted-foreground flex items-center justify-between">
         <p>{name}</p>
-        <p>{progress}%</p>
+        {/* <p>{progress}%</p> */}
       </div>
       <div className="bg-muted-foreground/10 dark:bg-muted-foreground-dark/10 h-3.5 w-full overflow-hidden rounded-[10px]">
         <motion.div

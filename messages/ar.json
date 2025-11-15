@@ -115,7 +115,72 @@
       }
     }
   },
-
+  "portfolio": {
+    "coreCompetencies": {
+      "title": "الكفاءات التقنية الأساسية",
+      "description": "تحليل مفصل لمهاراتي التقنية كمطور واجهات أمامية (Front-End Developer) متخصص في بناء تطبيقات ويب تفاعلية.",
+      "sections": [
+        {
+          "title": "اللغات والتقنيات الأساسية",
+          "skills": [
+            { "name": "JavaScript (ES6+)", "progress": 4 },
+            { "name": "TypeScript (TS)", "progress": 3 },
+            { "name": "HTML5", "progress": 4 },
+            { "name": "CSS3", "progress": 4 }
+          ]
+        },
+        {
+          "title": "أطر العمل والمكتبات",
+          "skills": [
+            { "name": "React", "progress": 4 },
+            { "name": "Next.js", "progress": 3 },
+            { "name": "React Query", "progress": 3 },
+            { "name": "Zustand", "progress": 3 },
+            { "name": "Tailwind CSS", "progress": 3 }
+          ]
+        },
+        {
+          "title": "الأدوات والمنصات",
+          "skills": [
+            { "name": "Git & GitHub", "progress": 4 },
+            { "name": "Node.js", "progress": 2 },
+            { "name": "Postman", "progress": 2 }
+          ]
+        }
+      ]
+    },
+    "additionalExpertise": {
+      "title": "خبرات إضافية",
+      "description": "سد الفجوة بين التكنولوجيا والزراعة التقليدية، معززة بالقدرات الشخصية الأساسية.",
+      "sections": {
+        "agriculture": {
+          "title": "الخبرة الزراعية (وقاية النبات)",
+          "skills": [
+            "إدارة المحاصيل",
+            "علوم التربة",
+            "أنظمة الري",
+            "علم أمراض النبات",
+            "الزراعة المستدامة",
+            "التكنولوجيا الزراعية (AgriTech)"
+          ]
+        },
+        "soft_skills": {
+          "title": "المهارات الشخصية",
+          "skills": [
+            "العمل الجماعي والتعاون",
+            "التواصل الفعال",
+            "حل المشكلات التحليلي",
+            "إدارة الوقت بمنهجية Agile",
+            "القيادة والتوجيه"
+          ]
+        }
+      }
+    },
+    "philosophy": {
+      "title": "فلسفتي ورسالتي",
+      "quote": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. إيماناً بمسؤولية الاستخلاف في الأرض، أجمع بين 'صنعة' التقنية و'علم' الزراعة، لأجعل من كل سطر كود غرسة مباركة في حقل المستقبل، طلباً لرضا الله وعوناً لخلقه."
+    }
+  },
   "footer": {
     "about": {
       "title": "عني",
