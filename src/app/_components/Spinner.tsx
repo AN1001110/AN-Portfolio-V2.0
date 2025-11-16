@@ -1,5 +1,5 @@
 import Box from "@mui/material/Box";
-import Circularprogress from "@mui/material/Circularprogress";
+import CircularProgress from "@mui/material/CircularProgress";
 
 export default function Spinner(): React.ReactNode {
   return (
@@ -23,6 +23,7 @@ export default function Spinner(): React.ReactNode {
 
       {/* Spinner Container */}
       <Box
+      
         sx={{
           position: "relative",
           display: "flex",
@@ -32,7 +33,7 @@ export default function Spinner(): React.ReactNode {
           zIndex: 51,
         }}
       >
-        <Circularprogress
+        <CircularProgress
           className="text-primary dark:text-primary-dark"
           size={40}
         />
