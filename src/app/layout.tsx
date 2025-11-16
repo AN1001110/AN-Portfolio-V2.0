@@ -8,6 +8,8 @@ import { Suspense } from "react";
 import Spinner from "./_components/Spinner";
 import { cookies } from "next/headers";
 import { Viewport } from "next";
+import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 
 const icons = [
   {
@@ -98,9 +100,27 @@ export default async function RootLayout({
           <AppRouterCacheProvider options={{ enableCssLayer: true }}>
             <Header />
             <Suspense fallback={<Spinner />}>{children}</Suspense>
+            <Analytics />
           </AppRouterCacheProvider>
         </NextIntlClientProvider>
         <Footer />
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-2Z643GT8EF"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-2Z643GT8EF');
+            `,
+          }}
+        />
       </body>
     </html>
   );
