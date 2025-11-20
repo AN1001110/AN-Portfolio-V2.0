@@ -1,12 +1,10 @@
 import { useMessages, useTranslations } from "next-intl";
 import PortfolioSkillsCard from "./PortfolioSkillsCard";
 import { type SkillsList } from "./PortfolioSkillItem";
-import { type SkillsCard } from "./PortfolioSkillsCard";
 export default function PortfolioHero() {
   const t = useTranslations("portfolio.coreCompetencies");
   const messages = useMessages();
   const sections = messages.portfolio.coreCompetencies.sections;
-  console.log(sections);
   return (
     <section className="container mx-auto px-6 py-24">
       <div className="mx-auto max-w-7xl">

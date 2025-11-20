@@ -101,7 +101,6 @@
 
     "certificates": {
       "title": "Certificates & Training",
-
       "cert1": {
         "title": "Web Development using React Js (120 hrs)",
         "issuer": "Information Technology Institute (ITI)"
@@ -157,22 +156,23 @@
         "agriculture": {
           "title": "Agricultural Expertise (Plant Protection)",
           "skills": [
-            "Crop Management",
-            "Soil Science",
-            "Irrigation Systems",
-            "Plant Pathology",
-            "Sustainable Agriculture",
-            "AgriTech"
+            "Exploring AgriTech Ecosystems",
+            "Insect Identification Basics",
+            "Pesticide Label Literacy & Safety Awareness",
+            "Concepts of Integrated Pest Management (IPM)",
+            "Fundamentals of Plant Pathology & Nematology"
           ]
         },
-        "soft_skills": {
+        "softSkills": {
           "title": "Soft Skills",
           "skills": [
-            "Teamwork & Collaboration",
+            "Active Learning & Research",
+            "Analytical Thinking & Problem Solving",
+            "Adaptability & Flexibility",
+            "Attention to Detail",
             "Effective Communication",
-            "Analytical Problem-Solving",
-            "Agile & Time Management",
-            "Leadership & Mentoring"
+            "Critical Thinking",
+            "Patience & Resilience"
           ]
         }
       }
@@ -180,6 +180,68 @@
     "philosophy": {
       "title": "My Philosophy & Mission",
       "quote": "In the name of Allah, the Most Gracious, the Most Merciful. Believing in the responsibility of stewardship (Istikhlaf) on Earth, I unite the 'craft' of technology and the 'science' of agriculture, striving to make every line of code a blessed seed in the field of the future, seeking the pleasure of Allah and the aid of His creation."
+    },
+    "projects": {
+      "title": "Projects",
+      "projects": [
+        {
+          "title": "AN Portfolio v2.0",
+          "desc": "A modern, multilingual portfolio built with Next.js and TypeScript for optimal performance and scalability.",
+          "tools": [
+            "Next.js",
+            "React",
+            "TypeScript",
+            "Tailwind CSS",
+            "Zustand",
+            "next-intl"
+          ],
+          "links": {
+            "git": "https://github.com/AN1001110/AN-Portfolio-V2.0",
+            "live": "https://an-portfolio-v2-0.vercel.app/"
+          },
+          "img": "p1"
+        },
+        {
+          "title": "Al-Maheroun Academy",
+          "desc": "A responsive landing page for an academy, featuring a clean UI to effectively present services and vision.",
+          "tools": ["React", "Vite", "HTML5", "CSS3"],
+          "links": {
+            "git": "https://github.com/AN1001110/AlMaheroun-Academy",
+            "live": "https://almaheroun-academy.vercel.app/"
+          },
+          "img": "p2"
+        },
+        {
+          "title": "Agri GPA Calculator",
+          "desc": "A specialized academic tool designed for Agriculture students to accurately calculate cumulative GPA.",
+          "tools": ["JavaScript", "HTML5", "CSS3"],
+          "links": {
+            "git": "https://github.com/AN1001110/Agri-GPA",
+            "live": "https://agri-gpa.netlify.app"
+          },
+          "img": "p3"
+        },
+        {
+          "title": "AN Portfolio v1.0",
+          "desc": "My initial portfolio showcasing foundational React skills, component architecture, and responsive design.",
+          "tools": ["React", "Vite", "HTML5", "CSS3"],
+          "links": {
+            "git": "https://github.com/AN1001110/Portfolio",
+            "live": "https://an-portfolio1x.vercel.app/"
+          },
+          "img": "p4"
+        },
+        {
+          "title": "To-Do List App",
+          "desc": "An interactive task manager using Vanilla JS and LocalStorage for data persistence without external libraries.",
+          "tools": ["JavaScript", "HTML5", "CSS3"],
+          "links": {
+            "git": "https://github.com/AN1001110/Simple-Todo-App",
+            "live": "https://an1001110.github.io/Simple-Todo-App/"
+          },
+          "img": "p5"
+        }
+      ]
     }
   },
   "footer": {

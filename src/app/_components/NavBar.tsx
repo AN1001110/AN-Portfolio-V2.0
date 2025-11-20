@@ -193,7 +193,7 @@ export default function NavBar() {
             </Stack>
             <Stack className="flex w-full flex-1 flex-row items-center justify-center p-4 md:justify-end">
               <IconButton
-                className="text-muted-foreground dark:text-muted-foreground-dark flex items-center justify-center"
+                className="text-muted-foreground dark:text-muted-foreground-dark flex p-0 items-center justify-center"
                 disabled={isPending}
                 onClick={toggleTheme}
               >
@@ -205,7 +205,7 @@ export default function NavBar() {
               </IconButton>
 
               <Button
-                className="text-muted-foreground dark:text-muted-foreground-dark hover:text-primary dark:hover:text-primary-dark ml-[-1rem] font-bold hover:bg-transparent"
+                className="text-muted-foreground dark:text-muted-foreground-dark hover:text-primary dark:hover:text-primary-dark  p-0 font-bold hover:bg-transparent"
                 disabled={isPending}
                 onClick={toggleLang}
               >

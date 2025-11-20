@@ -9,7 +9,6 @@ import Spinner from "./_components/Spinner";
 import { cookies } from "next/headers";
 import { Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
-import Script from "next/script";
 
 const icons = [
   {
@@ -104,7 +103,6 @@ export default async function RootLayout({
           </AppRouterCacheProvider>
         </NextIntlClientProvider>
         <Footer />
-        {/* Google Analytics */}
       </body>
     </html>
   );
