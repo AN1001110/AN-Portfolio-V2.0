@@ -1,6 +1,7 @@
 @layer theme, base, mui, components, utilities;
 @import "tailwindcss";
-
+/* add hover to small screens*/
+@custom-variant hover (&:hover);
 /* dark mode setup */
 @custom-variant dark (&:where(.dark, .dark *));
 

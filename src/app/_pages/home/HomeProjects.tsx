@@ -9,13 +9,13 @@ export default function HomeProjects() {
       title: t("project1.title"),
       desc: t("project1.desc"),
       imageUrl: "/projects/p2.png",
-      link: "/projects/project-1",
+      link: "/portfolio/project-1",
     },
     {
       title: t("project2.title"),
       desc: t("project2.desc"),
       imageUrl: "/projects/p1.png",
-      link: "/projects/project-2",
+      link: "/portfolio/project-2",
     },
   ];
   return (
