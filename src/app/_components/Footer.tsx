@@ -12,7 +12,7 @@ export default function Footer(): React.ReactNode {
   const links = ["home", "about", "contact", "portfolio"];
   const socialLinks = [
     { link: "https://www.linkedin.com/in/an0x1/", icon: faLinkedinIn },
-    { link: "https://github.com/AN1001110/", icon: faGithub },
+    { link: "https://github.com/an0x1/", icon: faGithub },
     { link: "https://wa.me/201128167551", icon: faWhatsapp },
   ];
 
@@ -51,7 +51,7 @@ export default function Footer(): React.ReactNode {
               <li>
                 <Link
                   className="hover:text-primary dark:hover:text-primary-dark transition-colors"
-                  href="mailto:AbdulrahmanNashat0x1@gmail.com"
+                  href="mailto:contact@anedge.link"
                 >
                   {t("contact.email")}
                 </Link>

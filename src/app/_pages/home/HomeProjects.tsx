@@ -9,13 +9,13 @@ export default function HomeProjects() {
       title: t("project1.title"),
       desc: t("project1.desc"),
       imageUrl: "/projects/p2.png",
-      link: "/portfolio/project-1",
+      link: "https://almaheroun-academy.vercel.app/",
     },
     {
       title: t("project2.title"),
       desc: t("project2.desc"),
       imageUrl: "/projects/p1.png",
-      link: "/portfolio/project-2",
+      link: "https://portfolio.anedge.link",
     },
   ];
   return (

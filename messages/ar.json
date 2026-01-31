@@ -196,7 +196,7 @@
             "next-intl"
           ],
           "links": {
-            "git": "https://github.com/AN1001110/AN-Portfolio-V2.0",
+            "git": "https://github.com/an0x1/AN-Portfolio-V2.0",
             "live": "https://an-portfolio-v2-0.vercel.app/"
           },
           "img": "p1"
@@ -206,43 +206,20 @@
           "desc": "صفحة هبوط (Landing Page) تعريفية لأكاديمية تعليمية، تتميز بتصميم عصري متجاوب يعرض الخدمات بوضوح.",
           "tools": ["React", "Vite", "HTML5", "CSS3"],
           "links": {
-            "git": "https://github.com/AN1001110/AlMaheroun-Academy",
+            "git": "https://github.com/an0x1/AlMaheroun-Academy",
             "live": "https://almaheroun-academy.vercel.app/"
           },
           "img": "p2"
-        },
-        {
-          "title": "حاسبة معدل كلية الزراعة",
-          "desc": "أداة خدمية مخصصة لطلاب كلية الزراعة لحساب المعدل التراكمي بدقة، تحل مشكلة حسابية واقعية.",
-          "tools": ["JavaScript", "HTML5", "CSS3"],
-          "links": {
-            "git": "https://github.com/AN1001110/Agri-GPA",
-            "live": "https://agri-gpa.netlify.app"
-          },
-          "img": "p3"
-        },
-        {
-          "title": "معرض الأعمال الشخصي (الإصدار الأول)",
-          "desc": "النسخة التأسيسية لمعرض أعمالي، تبرز مهارات بناء المكونات في React ومبادئ التصميم المتجاوب.",
-          "tools": ["React", "Vite", "HTML5", "CSS3"],
-          "links": {
-            "git": "https://github.com/AN1001110/Portfolio",
-            "live": "https://an-portfolio1x.vercel.app/"
-          },
-          "img": "p4"
-        },
-        {
-          "title": "تطبيق قائمة المهام (To-Do List)",
-          "desc": "تطبيق تفاعلي لإدارة المهام يعتمد على الـ Vanilla JS والتخزين المحلي (LocalStorage) دون مكتبات.",
-          "tools": ["JavaScript", "HTML5", "CSS3"],
-          "links": {
-            "git": "https://github.com/AN1001110/Simple-Todo-App",
-            "live": "https://an1001110.github.io/Simple-Todo-App/"
-          },
-          "img": "p5"
         }
       ]
     }
+  },
+  "contact": {
+    "links": [
+      { "title": "", "link": "" },
+      { "title": "", "link": "" },
+      { "title": "", "link": "" }
+    ]
   },
   "footer": {
     "about": {
@@ -258,7 +235,7 @@
     },
     "contact": {
       "title": "تواصل",
-      "email": "AbdulrahmanNashat0x1",
+      "email": "contact@anedge.link",
       "phone": "01128167551"
     },
     "follow": {

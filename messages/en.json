@@ -196,7 +196,7 @@
             "next-intl"
           ],
           "links": {
-            "git": "https://github.com/AN1001110/AN-Portfolio-V2.0",
+            "git": "https://github.com/an0x1/AN-Portfolio-V2.0",
             "live": "https://an-portfolio-v2-0.vercel.app/"
           },
           "img": "p1"
@@ -206,40 +206,10 @@
           "desc": "A responsive landing page for an academy, featuring a clean UI to effectively present services and vision.",
           "tools": ["React", "Vite", "HTML5", "CSS3"],
           "links": {
-            "git": "https://github.com/AN1001110/AlMaheroun-Academy",
+            "git": "https://github.com/an0x1/AlMaheroun-Academy",
             "live": "https://almaheroun-academy.vercel.app/"
           },
           "img": "p2"
-        },
-        {
-          "title": "Agri GPA Calculator",
-          "desc": "A specialized academic tool designed for Agriculture students to accurately calculate cumulative GPA.",
-          "tools": ["JavaScript", "HTML5", "CSS3"],
-          "links": {
-            "git": "https://github.com/AN1001110/Agri-GPA",
-            "live": "https://agri-gpa.netlify.app"
-          },
-          "img": "p3"
-        },
-        {
-          "title": "AN Portfolio v1.0",
-          "desc": "My initial portfolio showcasing foundational React skills, component architecture, and responsive design.",
-          "tools": ["React", "Vite", "HTML5", "CSS3"],
-          "links": {
-            "git": "https://github.com/AN1001110/Portfolio",
-            "live": "https://an-portfolio1x.vercel.app/"
-          },
-          "img": "p4"
-        },
-        {
-          "title": "To-Do List App",
-          "desc": "An interactive task manager using Vanilla JS and LocalStorage for data persistence without external libraries.",
-          "tools": ["JavaScript", "HTML5", "CSS3"],
-          "links": {
-            "git": "https://github.com/AN1001110/Simple-Todo-App",
-            "live": "https://an1001110.github.io/Simple-Todo-App/"
-          },
-          "img": "p5"
         }
       ]
     }
@@ -258,7 +228,7 @@
     },
     "contact": {
       "title": "Contact",
-      "email": "AbdulrahmanNashat0x1",
+      "email": "contact@anedge.link",
       "phone": "01128167551"
     },
     "follow": {

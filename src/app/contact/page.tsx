@@ -1,4 +1,6 @@
 import { GoogleAnalytics } from "@next/third-parties/google";
+import ContactHome from "../_pages/contact/ContactHome";
+import ContactLinks from "../_pages/contact/ContactLinks";
 
 export default function page() {
   return (
@@ -6,19 +8,10 @@ export default function page() {
       <GoogleAnalytics gaId="G-2Z643GT8EF" />
       <div className="mx-auto w-full max-w-6xl px-4 py-5 sm:px-6 lg:px-8">
         <main className="mt-16 px-4 md:px-10">
-          <div className="flex flex-wrap justify-between gap-4">
-            <div className="flex min-w-72 flex-col gap-3">
-              <h1 className="text-primary dark:text-primary-dark text-4xl leading-tight font-bold tracking-[-0.033em] sm:text-5xl">
-                تواصل معي
-              </h1>
-              <p className="text-card-foreground dark:text-card-foreground-dark text-base leading-normal font-normal">
-                لا تتردد في التواصل. أنا دائماً متاح للحديث عن مشاريع جديدة أو
-                فرص إبداعية.
-              </p>
-            </div>
-          </div>
+          <ContactHome />
           <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-5 lg:gap-16">
-            <div className="col-span-1 flex flex-col gap-10 lg:col-span-2">
+            <ContactLinks />
+            {/* <div className="col-span-1 flex flex-col gap-10 lg:col-span-2">
               <div className="flex flex-col gap-6">
                 <div className="flex items-center gap-4">
                   <div className="bg-surface-dark text-primary flex size-12 shrink-0 items-center justify-center rounded-lg">
@@ -66,7 +59,7 @@ export default function page() {
                   href="#"
                 ></a>
               </div>
-            </div>
+            </div>*/}
             <div className="col-span-1 lg:col-span-3">
               <form action="#" className="space-y-6" method="POST">
                 <div className="grid grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-2">
