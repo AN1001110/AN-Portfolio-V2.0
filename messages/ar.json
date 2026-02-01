@@ -214,12 +214,29 @@
       ]
     }
   },
+
   "contact": {
-    "links": [
-      { "title": "", "link": "" },
-      { "title": "", "link": "" },
-      { "title": "", "link": "" }
-    ]
+    "title": "تواصل معنا",
+    "description": "لا تتردد في التواصل. أنا دائماً متاح للحديث عن مشاريع جديدة أو فرص إبداعية.",
+    "form": {
+      "fullName": {
+        "label": "الاسم الكامل",
+        "placeholder": "مثال: عبدالرحمن نشأت"
+      },
+      "email": {
+        "label": "البريد الإلكتروني",
+        "placeholder": "contact@anedge.link"
+      },
+      "subject": {
+        "label": "الموضوع",
+        "placeholder": "بخصوص فرصة عمل"
+      },
+      "message": {
+        "label": "الرسالة",
+        "placeholder": "اكتب رسالتك هنا..."
+      },
+      "submit": "إرسال الرسالة"
+    }
   },
   "footer": {
     "about": {

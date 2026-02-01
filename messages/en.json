@@ -214,6 +214,29 @@
       ]
     }
   },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Feel free to get in touch. I am always open to discussing new projects or creative opportunities.",
+    "form": {
+      "fullName": {
+        "label": "Full Name",
+        "placeholder": "e.g., Abdelrahman Nashaat"
+      },
+      "email": {
+        "label": "Email Address",
+        "placeholder": "contact@anedge.link"
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "Regarding a job opportunity"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Write your message here..."
+      },
+      "submit": "Send Message"
+    }
+  },
   "footer": {
     "about": {
       "title": "About Me",
