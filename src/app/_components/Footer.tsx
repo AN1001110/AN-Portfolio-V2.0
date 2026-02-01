@@ -19,7 +19,7 @@ export default function Footer(): React.ReactNode {
   return (
     <footer className="bg-background dark:bg-background-dark dark:text-muted-foreground-dark text-muted-foreground border-primary/20 relative overflow-hidden border-t pt-16 pb-8">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-2 md:text-right lg:grid-cols-4">
+        <div className="grid grid-cols-1 justify-items-center gap-8 text-center md:grid-cols-2 md:text-start lg:grid-cols-4">
           <div className="flex flex-col md:items-center lg:col-span-1 lg:items-start">
             <h5 className="text-secondary dark:text-secondary-dark mb-4 text-lg font-bold">
               {t("about.title")}
@@ -66,11 +66,11 @@ export default function Footer(): React.ReactNode {
               </li>
             </ul>
           </div>
-          <div className="flex flex-col md:items-center lg:col-start-4 lg:items-end">
+          <div className="flex flex-col md:items-center lg:col-start-4 lg:items-start">
             <h5 className="text-primary dark:text-primary-dark mb-5 text-lg font-bold">
               {t("follow.title")}
             </h5>
-            <div className="flex w-full flex-col items-center justify-center gap-4 lg:flex-row lg:justify-end">
+            <div className="flex w-full flex-col items-center justify-center gap-4 lg:flex-row lg:justify-start">
               {socialLinks.map((link) => (
                 <Link
                   key={link.link}
@@ -85,7 +85,7 @@ export default function Footer(): React.ReactNode {
             </div>
           </div>
         </div>
-        <div className="mt-12 border-t border-white/10 pt-8 text-center">
+        <div className="mt-12 border-t border-white/10 pt-8">
           <p className="text-sm">
             © {`${new Date().getFullYear()} ${t("copyright")}`}
           </p>
