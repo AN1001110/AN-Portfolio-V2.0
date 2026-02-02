@@ -85,7 +85,7 @@ export default function Footer(): React.ReactNode {
             </div>
           </div>
         </div>
-        <div className="mt-12 border-t border-white/10 pt-8">
+        <div className="mt-12 border-t border-white/10 pt-8 text-center">
           <p className="text-sm">
             © {`${new Date().getFullYear()} ${t("copyright")}`}
           </p>
